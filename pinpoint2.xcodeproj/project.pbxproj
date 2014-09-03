@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A0E964C19B639300069A8C1 /* PPUserPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E964B19B639300069A8C1 /* PPUserPreferencesViewController.m */; };
 		4A207B91195C212000ADBC76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A207B90195C212000ADBC76 /* Foundation.framework */; };
 		4A207B93195C212000ADBC76 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A207B92195C212000ADBC76 /* CoreGraphics.framework */; };
 		4A207B95195C212000ADBC76 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A207B94195C212000ADBC76 /* UIKit.framework */; };
@@ -14,13 +15,32 @@
 		4A207B9D195C212000ADBC76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A207B9C195C212000ADBC76 /* main.m */; };
 		4A207BA1195C212000ADBC76 /* PPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A207BA0195C212000ADBC76 /* PPAppDelegate.m */; };
 		4A207BA4195C212000ADBC76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A207BA2195C212000ADBC76 /* Main.storyboard */; };
-		4A207BA7195C212000ADBC76 /* PPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A207BA6195C212000ADBC76 /* PPViewController.m */; };
 		4A207BA9195C212000ADBC76 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A207BA8195C212000ADBC76 /* Images.xcassets */; };
 		4A207BB0195C212000ADBC76 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A207BAF195C212000ADBC76 /* XCTest.framework */; };
 		4A207BB1195C212000ADBC76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A207B90195C212000ADBC76 /* Foundation.framework */; };
 		4A207BB2195C212000ADBC76 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A207B94195C212000ADBC76 /* UIKit.framework */; };
 		4A207BBA195C212000ADBC76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A207BB8195C212000ADBC76 /* InfoPlist.strings */; };
 		4A207BBC195C212000ADBC76 /* pinpoint2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A207BBB195C212000ADBC76 /* pinpoint2Tests.m */; };
+		4A207BC7195C226C00ADBC76 /* PPCardCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A207BC6195C226C00ADBC76 /* PPCardCollectionViewController.m */; };
+		4A207BCA195C230E00ADBC76 /* PPCardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A207BC9195C230E00ADBC76 /* PPCardCollectionViewCell.m */; };
+		4A207BCE195C2EB600ADBC76 /* PPCardService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A207BCD195C2EB600ADBC76 /* PPCardService.m */; };
+		4A207BD1195C2FF200ADBC76 /* PPCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A207BD0195C2FF200ADBC76 /* PPCard.m */; };
+		4A207BD4195C300800ADBC76 /* PPUserPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A207BD3195C300800ADBC76 /* PPUserPreferences.m */; };
+		4A207BD7195C341E00ADBC76 /* PPWorkingFuturesCardProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A207BD6195C341E00ADBC76 /* PPWorkingFuturesCardProvider.m */; };
+		4A207BDA195C343500ADBC76 /* PPJobCardProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A207BD9195C343500ADBC76 /* PPJobCardProvider.m */; };
+		4A207BDE195C39A300ADBC76 /* PPCardProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A207BDD195C39A300ADBC76 /* PPCardProvider.m */; };
+		4A207BE0195C3C7100ADBC76 /* job-card.html in Resources */ = {isa = PBXBuildFile; fileRef = 4A207BDF195C3C7100ADBC76 /* job-card.html */; };
+		4A207BE3195C3C9C00ADBC76 /* PPAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A207BE2195C3C9C00ADBC76 /* PPAPIClient.m */; };
+		4A207BE6195C4BE900ADBC76 /* PPUserPreferencesStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A207BE5195C4BE900ADBC76 /* PPUserPreferencesStore.m */; };
+		4A207BE9195C5C2D00ADBC76 /* PPCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A207BE8195C5C2D00ADBC76 /* PPCollectionViewFlowLayout.m */; };
+		4A207BEC195D38C800ADBC76 /* PPLoadingCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A207BEB195D38C800ADBC76 /* PPLoadingCollectionViewCell.m */; };
+		4A207BF0195D400A00ADBC76 /* working-futures-card.html in Resources */ = {isa = PBXBuildFile; fileRef = 4A207BED195D400A00ADBC76 /* working-futures-card.html */; };
+		4A207BF1195D400A00ADBC76 /* Chart.js in Resources */ = {isa = PBXBuildFile; fileRef = 4A207BEE195D400A00ADBC76 /* Chart.js */; };
+		4A207BF2195D400A00ADBC76 /* jquery-2.1.0.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 4A207BEF195D400A00ADBC76 /* jquery-2.1.0.min.js */; };
+		4A207BFA195D83D000ADBC76 /* PPJobCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A207BF9195D83D000ADBC76 /* PPJobCard.m */; };
+		4A207BFD195D997000ADBC76 /* PPWorkingFuturesCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A207BFC195D997000ADBC76 /* PPWorkingFuturesCard.m */; };
+		4A207BFF195F1FCB00ADBC76 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A207BFE195F1FCB00ADBC76 /* QuartzCore.framework */; };
+		90A0FAF7A36C49B09F24D8EB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 368FD67F4D394160AA34578D /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +54,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		368FD67F4D394160AA34578D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A0E964A19B639300069A8C1 /* PPUserPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPUserPreferencesViewController.h; sourceTree = "<group>"; };
+		4A0E964B19B639300069A8C1 /* PPUserPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPUserPreferencesViewController.m; sourceTree = "<group>"; };
 		4A207B8D195C212000ADBC76 /* pinpoint2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pinpoint2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A207B90195C212000ADBC76 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4A207B92195C212000ADBC76 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,14 +68,49 @@
 		4A207B9F195C212000ADBC76 /* PPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPAppDelegate.h; sourceTree = "<group>"; };
 		4A207BA0195C212000ADBC76 /* PPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPAppDelegate.m; sourceTree = "<group>"; };
 		4A207BA3195C212000ADBC76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4A207BA5195C212000ADBC76 /* PPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPViewController.h; sourceTree = "<group>"; };
-		4A207BA6195C212000ADBC76 /* PPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPViewController.m; sourceTree = "<group>"; };
 		4A207BA8195C212000ADBC76 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4A207BAE195C212000ADBC76 /* pinpoint2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pinpoint2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A207BAF195C212000ADBC76 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4A207BB7195C212000ADBC76 /* pinpoint2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "pinpoint2Tests-Info.plist"; sourceTree = "<group>"; };
 		4A207BB9195C212000ADBC76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4A207BBB195C212000ADBC76 /* pinpoint2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pinpoint2Tests.m; sourceTree = "<group>"; };
+		4A207BC5195C226C00ADBC76 /* PPCardCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPCardCollectionViewController.h; sourceTree = "<group>"; };
+		4A207BC6195C226C00ADBC76 /* PPCardCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPCardCollectionViewController.m; sourceTree = "<group>"; };
+		4A207BC8195C230E00ADBC76 /* PPCardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPCardCollectionViewCell.h; sourceTree = "<group>"; };
+		4A207BC9195C230E00ADBC76 /* PPCardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPCardCollectionViewCell.m; sourceTree = "<group>"; };
+		4A207BCB195C2A3B00ADBC76 /* PPCardActionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPCardActionDelegate.h; sourceTree = "<group>"; };
+		4A207BCC195C2EB600ADBC76 /* PPCardService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPCardService.h; sourceTree = "<group>"; };
+		4A207BCD195C2EB600ADBC76 /* PPCardService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPCardService.m; sourceTree = "<group>"; };
+		4A207BCF195C2FF200ADBC76 /* PPCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPCard.h; sourceTree = "<group>"; };
+		4A207BD0195C2FF200ADBC76 /* PPCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPCard.m; sourceTree = "<group>"; };
+		4A207BD2195C300800ADBC76 /* PPUserPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPUserPreferences.h; sourceTree = "<group>"; };
+		4A207BD3195C300800ADBC76 /* PPUserPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPUserPreferences.m; sourceTree = "<group>"; };
+		4A207BD5195C341E00ADBC76 /* PPWorkingFuturesCardProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPWorkingFuturesCardProvider.h; sourceTree = "<group>"; };
+		4A207BD6195C341E00ADBC76 /* PPWorkingFuturesCardProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPWorkingFuturesCardProvider.m; sourceTree = "<group>"; };
+		4A207BD8195C343500ADBC76 /* PPJobCardProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPJobCardProvider.h; sourceTree = "<group>"; };
+		4A207BD9195C343500ADBC76 /* PPJobCardProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPJobCardProvider.m; sourceTree = "<group>"; };
+		4A207BDB195C380000ADBC76 /* PPCardProviderInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPCardProviderInterface.h; sourceTree = "<group>"; };
+		4A207BDC195C39A300ADBC76 /* PPCardProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPCardProvider.h; sourceTree = "<group>"; };
+		4A207BDD195C39A300ADBC76 /* PPCardProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPCardProvider.m; sourceTree = "<group>"; };
+		4A207BDF195C3C7100ADBC76 /* job-card.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "job-card.html"; sourceTree = "<group>"; };
+		4A207BE1195C3C9C00ADBC76 /* PPAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPAPIClient.h; sourceTree = "<group>"; };
+		4A207BE2195C3C9C00ADBC76 /* PPAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPAPIClient.m; sourceTree = "<group>"; };
+		4A207BE4195C4BE900ADBC76 /* PPUserPreferencesStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPUserPreferencesStore.h; sourceTree = "<group>"; };
+		4A207BE5195C4BE900ADBC76 /* PPUserPreferencesStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPUserPreferencesStore.m; sourceTree = "<group>"; };
+		4A207BE7195C5C2D00ADBC76 /* PPCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		4A207BE8195C5C2D00ADBC76 /* PPCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		4A207BEA195D38C800ADBC76 /* PPLoadingCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPLoadingCollectionViewCell.h; sourceTree = "<group>"; };
+		4A207BEB195D38C800ADBC76 /* PPLoadingCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPLoadingCollectionViewCell.m; sourceTree = "<group>"; };
+		4A207BED195D400A00ADBC76 /* working-futures-card.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "working-futures-card.html"; sourceTree = "<group>"; };
+		4A207BEE195D400A00ADBC76 /* Chart.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Chart.js; sourceTree = "<group>"; };
+		4A207BEF195D400A00ADBC76 /* jquery-2.1.0.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-2.1.0.min.js"; sourceTree = "<group>"; };
+		4A207BF7195D622300ADBC76 /* PPDismissableCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPDismissableCard.h; sourceTree = "<group>"; };
+		4A207BF8195D83D000ADBC76 /* PPJobCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPJobCard.h; sourceTree = "<group>"; };
+		4A207BF9195D83D000ADBC76 /* PPJobCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPJobCard.m; sourceTree = "<group>"; };
+		4A207BFB195D997000ADBC76 /* PPWorkingFuturesCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPWorkingFuturesCard.h; sourceTree = "<group>"; };
+		4A207BFC195D997000ADBC76 /* PPWorkingFuturesCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPWorkingFuturesCard.m; sourceTree = "<group>"; };
+		4A207BFE195F1FCB00ADBC76 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C0B8BFE179394B65A5ECDCC7 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +118,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A207BFF195F1FCB00ADBC76 /* QuartzCore.framework in Frameworks */,
 				4A207B93195C212000ADBC76 /* CoreGraphics.framework in Frameworks */,
 				4A207B95195C212000ADBC76 /* UIKit.framework in Frameworks */,
 				4A207B91195C212000ADBC76 /* Foundation.framework in Frameworks */,
+				90A0FAF7A36C49B09F24D8EB /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +146,7 @@
 				4A207BB5195C212000ADBC76 /* pinpoint2Tests */,
 				4A207B8F195C212000ADBC76 /* Frameworks */,
 				4A207B8E195C212000ADBC76 /* Products */,
+				C0B8BFE179394B65A5ECDCC7 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +162,12 @@
 		4A207B8F195C212000ADBC76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A207BFE195F1FCB00ADBC76 /* QuartzCore.framework */,
 				4A207B90195C212000ADBC76 /* Foundation.framework */,
 				4A207B92195C212000ADBC76 /* CoreGraphics.framework */,
 				4A207B94195C212000ADBC76 /* UIKit.framework */,
 				4A207BAF195C212000ADBC76 /* XCTest.framework */,
+				368FD67F4D394160AA34578D /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,10 +178,14 @@
 				4A207B9F195C212000ADBC76 /* PPAppDelegate.h */,
 				4A207BA0195C212000ADBC76 /* PPAppDelegate.m */,
 				4A207BA2195C212000ADBC76 /* Main.storyboard */,
-				4A207BA5195C212000ADBC76 /* PPViewController.h */,
-				4A207BA6195C212000ADBC76 /* PPViewController.m */,
 				4A207BA8195C212000ADBC76 /* Images.xcassets */,
 				4A207B97195C212000ADBC76 /* Supporting Files */,
+				4A207BF4195D606A00ADBC76 /* Controllers and View */,
+				4A207BCC195C2EB600ADBC76 /* PPCardService.h */,
+				4A207BCD195C2EB600ADBC76 /* PPCardService.m */,
+				4A207BF3195D605700ADBC76 /* Cards */,
+				4A207BF6195D60B100ADBC76 /* Data store and Object Representations */,
+				4A207BF5195D608300ADBC76 /* Card Data Providers */,
 			);
 			path = pinpoint2;
 			sourceTree = "<group>";
@@ -126,6 +193,10 @@
 		4A207B97195C212000ADBC76 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4A207BED195D400A00ADBC76 /* working-futures-card.html */,
+				4A207BEE195D400A00ADBC76 /* Chart.js */,
+				4A207BEF195D400A00ADBC76 /* jquery-2.1.0.min.js */,
+				4A207BDF195C3C7100ADBC76 /* job-card.html */,
 				4A207B98195C212000ADBC76 /* pinpoint2-Info.plist */,
 				4A207B99195C212000ADBC76 /* InfoPlist.strings */,
 				4A207B9C195C212000ADBC76 /* main.m */,
@@ -152,6 +223,65 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4A207BF3195D605700ADBC76 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				4A207BCF195C2FF200ADBC76 /* PPCard.h */,
+				4A207BD0195C2FF200ADBC76 /* PPCard.m */,
+				4A207BF7195D622300ADBC76 /* PPDismissableCard.h */,
+				4A207BF8195D83D000ADBC76 /* PPJobCard.h */,
+				4A207BF9195D83D000ADBC76 /* PPJobCard.m */,
+				4A207BFB195D997000ADBC76 /* PPWorkingFuturesCard.h */,
+				4A207BFC195D997000ADBC76 /* PPWorkingFuturesCard.m */,
+			);
+			name = Cards;
+			sourceTree = "<group>";
+		};
+		4A207BF4195D606A00ADBC76 /* Controllers and View */ = {
+			isa = PBXGroup;
+			children = (
+				4A207BCB195C2A3B00ADBC76 /* PPCardActionDelegate.h */,
+				4A207BC5195C226C00ADBC76 /* PPCardCollectionViewController.h */,
+				4A207BC6195C226C00ADBC76 /* PPCardCollectionViewController.m */,
+				4A207BC8195C230E00ADBC76 /* PPCardCollectionViewCell.h */,
+				4A207BC9195C230E00ADBC76 /* PPCardCollectionViewCell.m */,
+				4A207BE7195C5C2D00ADBC76 /* PPCollectionViewFlowLayout.h */,
+				4A207BE8195C5C2D00ADBC76 /* PPCollectionViewFlowLayout.m */,
+				4A207BEA195D38C800ADBC76 /* PPLoadingCollectionViewCell.h */,
+				4A207BEB195D38C800ADBC76 /* PPLoadingCollectionViewCell.m */,
+				4A0E964A19B639300069A8C1 /* PPUserPreferencesViewController.h */,
+				4A0E964B19B639300069A8C1 /* PPUserPreferencesViewController.m */,
+			);
+			name = "Controllers and View";
+			sourceTree = "<group>";
+		};
+		4A207BF5195D608300ADBC76 /* Card Data Providers */ = {
+			isa = PBXGroup;
+			children = (
+				4A207BE1195C3C9C00ADBC76 /* PPAPIClient.h */,
+				4A207BE2195C3C9C00ADBC76 /* PPAPIClient.m */,
+				4A207BD5195C341E00ADBC76 /* PPWorkingFuturesCardProvider.h */,
+				4A207BD6195C341E00ADBC76 /* PPWorkingFuturesCardProvider.m */,
+				4A207BD8195C343500ADBC76 /* PPJobCardProvider.h */,
+				4A207BD9195C343500ADBC76 /* PPJobCardProvider.m */,
+				4A207BDB195C380000ADBC76 /* PPCardProviderInterface.h */,
+				4A207BDC195C39A300ADBC76 /* PPCardProvider.h */,
+				4A207BDD195C39A300ADBC76 /* PPCardProvider.m */,
+			);
+			name = "Card Data Providers";
+			sourceTree = "<group>";
+		};
+		4A207BF6195D60B100ADBC76 /* Data store and Object Representations */ = {
+			isa = PBXGroup;
+			children = (
+				4A207BD2195C300800ADBC76 /* PPUserPreferences.h */,
+				4A207BD3195C300800ADBC76 /* PPUserPreferences.m */,
+				4A207BE4195C4BE900ADBC76 /* PPUserPreferencesStore.h */,
+				4A207BE5195C4BE900ADBC76 /* PPUserPreferencesStore.m */,
+			);
+			name = "Data store and Object Representations";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +289,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A207BBF195C212000ADBC76 /* Build configuration list for PBXNativeTarget "pinpoint2" */;
 			buildPhases = (
+				0594132F24FF42B28A6E41B6 /* Check Pods Manifest.lock */,
 				4A207B89195C212000ADBC76 /* Sources */,
 				4A207B8A195C212000ADBC76 /* Frameworks */,
 				4A207B8B195C212000ADBC76 /* Resources */,
+				4D7F9839A4394DC98DF62F06 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -229,8 +361,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A207BF0195D400A00ADBC76 /* working-futures-card.html in Resources */,
 				4A207BA9195C212000ADBC76 /* Images.xcassets in Resources */,
 				4A207B9B195C212000ADBC76 /* InfoPlist.strings in Resources */,
+				4A207BF2195D400A00ADBC76 /* jquery-2.1.0.min.js in Resources */,
+				4A207BF1195D400A00ADBC76 /* Chart.js in Resources */,
+				4A207BE0195C3C7100ADBC76 /* job-card.html in Resources */,
 				4A207BA4195C212000ADBC76 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,14 +381,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0594132F24FF42B28A6E41B6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4D7F9839A4394DC98DF62F06 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4A207B89195C212000ADBC76 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A207BD1195C2FF200ADBC76 /* PPCard.m in Sources */,
+				4A207BCA195C230E00ADBC76 /* PPCardCollectionViewCell.m in Sources */,
+				4A207BDA195C343500ADBC76 /* PPJobCardProvider.m in Sources */,
+				4A207BC7195C226C00ADBC76 /* PPCardCollectionViewController.m in Sources */,
 				4A207BA1195C212000ADBC76 /* PPAppDelegate.m in Sources */,
-				4A207BA7195C212000ADBC76 /* PPViewController.m in Sources */,
+				4A207BE6195C4BE900ADBC76 /* PPUserPreferencesStore.m in Sources */,
+				4A207BEC195D38C800ADBC76 /* PPLoadingCollectionViewCell.m in Sources */,
+				4A207BFA195D83D000ADBC76 /* PPJobCard.m in Sources */,
+				4A207BCE195C2EB600ADBC76 /* PPCardService.m in Sources */,
+				4A207BDE195C39A300ADBC76 /* PPCardProvider.m in Sources */,
+				4A207BFD195D997000ADBC76 /* PPWorkingFuturesCard.m in Sources */,
+				4A207BD7195C341E00ADBC76 /* PPWorkingFuturesCardProvider.m in Sources */,
+				4A207BE3195C3C9C00ADBC76 /* PPAPIClient.m in Sources */,
 				4A207B9D195C212000ADBC76 /* main.m in Sources */,
+				4A207BE9195C5C2D00ADBC76 /* PPCollectionViewFlowLayout.m in Sources */,
+				4A0E964C19B639300069A8C1 /* PPUserPreferencesViewController.m in Sources */,
+				4A207BD4195C300800ADBC76 /* PPUserPreferences.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +557,7 @@
 		};
 		4A207BC0195C212000ADBC76 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0B8BFE179394B65A5ECDCC7 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -387,6 +571,7 @@
 		};
 		4A207BC1195C212000ADBC76 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0B8BFE179394B65A5ECDCC7 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -457,6 +642,7 @@
 				4A207BC1195C212000ADBC76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A207BC2195C212000ADBC76 /* Build configuration list for PBXNativeTarget "pinpoint2Tests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +651,7 @@
 				4A207BC4195C212000ADBC76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

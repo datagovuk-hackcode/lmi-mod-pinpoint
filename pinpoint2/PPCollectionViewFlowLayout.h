@@ -1,5 +1,5 @@
 //
-//  PPViewController.h
+//  PPCollectionViewFlowLayout.h
 //  pinpoint2
 //
 //  Created by Philip Hardwick on 26/06/2014.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PPViewController : UIViewController
+@interface PPCollectionViewFlowLayout : UICollectionViewFlowLayout
 
 @end

@@ -7,12 +7,19 @@
 //
 
 #import "PPAppDelegate.h"
+#import "PPJobCardProvider.h"
+#import "PPWorkingFuturesCardProvider.h"
+#import "PPCardService.h"
 
 @implementation PPAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [[PPJobCardProvider alloc] initWithCardService:[PPCardService sharedInstance]];
+    [[PPWorkingFuturesCardProvider alloc] initWithCardService:[PPCardService sharedInstance]];
+    [[UINavigationBar appearance] setBackgroundColor:[UIColor orangeColor]];
+    
+    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:[NSBundle mainBundle].bundleIdentifier];
     return YES;
 }
 							

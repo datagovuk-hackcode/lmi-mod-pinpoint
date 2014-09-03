@@ -1,0 +1,58 @@
+<html>
+    <script src="jquery-2.1.0.min.js"></script>
+    <script src="Chart.js"></script>
+    <style type="text/css">
+        canvas#myChart {
+            padding: 0px;
+            display:block;
+            overflow:hidden;
+            width:100%;
+            height:100%;
+        }
+        body {
+            background: rgba(255,255,255,0);
+            margin:0px;
+            padding:5px;
+        }
+    </style>
+<body>
+    <div style="width:100%; height:100%;">
+        <h3>Future job vacancies for {{title}}</h3>
+        <canvas height="220" width="300" id="myChart"></canvas>
+        <script>
+//            $(document).ready( function(){
+//                              //Get the canvas &
+//                              var c = $('canvas');
+//                              var ct = c.get(0).getContext('2d');
+//                              var container = $(c).parent();
+//                              
+//                              function respondCanvas(){
+//                              c.attr('width', $(container).width() ); //max width
+//                              c.attr('height', $(container).height() ); //max height
+//                              console.log("Container width and height", $(container).width(), $(container).height());
+//                              console.log("Canvas width and height", $(c).width(), $(c).height());
+//                              }
+//                              
+//                              //Run function when browser resizes
+//                              $(window).resize( respondCanvas );
+//                              
+//                              //Initial call 
+//                              respondCanvas();
+//                              
+//                              });
+//                              function arrayObjectIndexOf(myArray, id) {
+//                                  for(var i = 0, len = myArray.length; i < len; i++) {
+//                                      if (myArray[i]["id"] === id) return i;
+//                                  }
+//                                  return -1;
+//                              }
+        </script>
+        <script>
+            var data = { labels :['{{yearsCommaSeparatedList}}'], datasets : [ { id : 'all', fillColor : 'rgba(240,240,240,0.5)', strokeColor : 'rgba(220,220,220,1)', pointColor : 'rgba(220,220,220,1)', pointStrokeColor : '#fff', data : [{{workingFuturesCommaSeparatedLIst}}] } ] };
+            
+            var ctx = document.getElementById('myChart').getContext('2d');var myNewChart = new Chart(ctx);myNewChart.Line(data);
+            
+        </script>
+    </div>
+</body>
+</html>
