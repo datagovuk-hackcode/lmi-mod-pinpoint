@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A0E964C19B639300069A8C1 /* PPUserPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E964B19B639300069A8C1 /* PPUserPreferencesViewController.m */; };
+		4A0E964E19B7C8DC0069A8C1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4A0E964D19B7C8DC0069A8C1 /* .gitignore */; };
 		4A207B91195C212000ADBC76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A207B90195C212000ADBC76 /* Foundation.framework */; };
 		4A207B93195C212000ADBC76 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A207B92195C212000ADBC76 /* CoreGraphics.framework */; };
 		4A207B95195C212000ADBC76 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A207B94195C212000ADBC76 /* UIKit.framework */; };
@@ -57,6 +58,7 @@
 		368FD67F4D394160AA34578D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A0E964A19B639300069A8C1 /* PPUserPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPUserPreferencesViewController.h; sourceTree = "<group>"; };
 		4A0E964B19B639300069A8C1 /* PPUserPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPUserPreferencesViewController.m; sourceTree = "<group>"; };
+		4A0E964D19B7C8DC0069A8C1 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		4A207B8D195C212000ADBC76 /* pinpoint2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pinpoint2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A207B90195C212000ADBC76 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4A207B92195C212000ADBC76 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -142,6 +144,7 @@
 		4A207B84195C212000ADBC76 = {
 			isa = PBXGroup;
 			children = (
+				4A0E964D19B7C8DC0069A8C1 /* .gitignore */,
 				4A207B96195C212000ADBC76 /* pinpoint2 */,
 				4A207BB5195C212000ADBC76 /* pinpoint2Tests */,
 				4A207B8F195C212000ADBC76 /* Frameworks */,
@@ -361,6 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A0E964E19B7C8DC0069A8C1 /* .gitignore in Resources */,
 				4A207BF0195D400A00ADBC76 /* working-futures-card.html in Resources */,
 				4A207BA9195C212000ADBC76 /* Images.xcassets in Resources */,
 				4A207B9B195C212000ADBC76 /* InfoPlist.strings in Resources */,
