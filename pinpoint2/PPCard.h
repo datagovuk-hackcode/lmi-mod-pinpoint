@@ -10,13 +10,14 @@
 #import "PPUserPreferences.h"
 #import "PPUserPreferencesStore.h"
 #import "PPDismissableCard.h"
+#import "PPCardRelevancy.h"
 
 typedef NS_ENUM(NSInteger, PPCardType) {
     PPCardTypeJob,
     PPCardTypeWorkingFutures
 };
 
-@interface PPCard : NSObject <PPDismissableCard> {
+@interface PPCard : NSObject <PPDismissableCard, PPCardRelevancy> {
     PPUserPreferencesStore *userPrefsStore;
 }
 

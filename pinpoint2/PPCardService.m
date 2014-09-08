@@ -38,13 +38,15 @@
 }
 
 - (void)getCardsFromProviders {
-    if (![self userPreferencesAreDifferentToCurrentCards]) {
+    cardsFinished = [self removeOutOfDateCardsFromCardArray:cardsFinished];
+    if ([self weHaveEnoughFinishedCards]) {
         return;
     }
     for (id<PPCardProviderInterface> cardProvider in cardProviders) {
         PPCard *card = [cardProvider provideCardFromUserPreferences:[[PPUserPreferencesStore sharedInstance] getCurrentUserPreferences]];
         if ([[card isFinished] boolValue] && ![cardsFinished containsObject:card]) {
-            [cardsFinished addObject:card];
+            //[cardsFinished addObject:card];
+            [cardsFinished insertObject:card atIndex:arc4random_uniform(cardsFinished.count)];
         } else if (card) {
             [cardsUnfinished addObject:card];
         }
@@ -56,7 +58,7 @@
     if ([object isKindOfClass:[PPCard class]]) {
         if ([keyPath isEqualToString:NSStringFromSelector(@selector(isFinished))]) {
             if (![cardsFinished containsObject:object]) {
-                [cardsFinished addObject:object];
+                [cardsFinished insertObject:object atIndex:arc4random_uniform(cardsFinished.count)];
             }
             [cardsUnfinished removeObject:object];
             [object removeObserver:self forKeyPath:NSStringFromSelector(@selector(isFinished))];
@@ -64,9 +66,23 @@
     }
 }
 
-- (bool)userPreferencesAreDifferentToCurrentCards {
-    //TODO implement
-    return YES;
+- (bool)userPreferencesAreDifferentToCard:(PPCard *)card {
+    return [[PPUserPreferencesStore sharedInstance] userPreferencesAreOutOfDate:card.userPreferences];
+}
+
+- (bool)weHaveEnoughFinishedCards {
+    NSLog(@"number of cards ready to go: %d", cardsFinished.count);
+    return cardsFinished.count > 4;
+}
+
+- (NSMutableArray *)removeOutOfDateCardsFromCardArray:(NSMutableArray *)cards {
+    for (int i = 0; i < cards.count; i++) {
+        if ([cards[i] cardCanBeOutOfDate] && [self userPreferencesAreDifferentToCard:cards[i]]) {
+            [cards removeObjectAtIndex:i];
+            i--;
+        }
+    }
+    return cards;
 }
 
 + (instancetype)sharedInstance {

@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSNumber *isInterestedInMoving;
 @property (strong, nonatomic) NSArray *likedJobs;
 @property (strong, nonatomic) NSString *socOfCurrentJob;
+@property (strong, nonatomic) NSNumber *versionOfPreferences;
 
 @property (strong, nonatomic) NSNumber *userPreferencesUpdateNumber;
 

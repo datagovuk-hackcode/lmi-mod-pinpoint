@@ -40,4 +40,8 @@
     }
 }
 
+- (bool)cardCanBeOutOfDate {
+    return YES;
+}
+
 @end

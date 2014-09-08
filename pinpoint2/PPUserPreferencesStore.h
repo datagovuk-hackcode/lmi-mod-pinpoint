@@ -11,12 +11,14 @@
 
 @interface PPUserPreferencesStore : NSObject {
     NSUserDefaults *defaults;
+    NSInteger versionOfUserPreferences;
 }
 
 - (void)addPoints:(NSInteger)points forKeyword:(NSString *)keyword;
 - (NSArray *)getArrayOfKeywordsAndPointsOrderedByPoints;
 - (void)addLikedJobData:(NSDictionary *)jobData;
 - (PPUserPreferences *)getCurrentUserPreferences;
+- (bool)userPreferencesAreOutOfDate:(PPUserPreferences *)userPreferences;
 + (instancetype)sharedInstance;
 
 

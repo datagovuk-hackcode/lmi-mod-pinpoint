@@ -16,7 +16,7 @@
         return nil;
     }
     PPWorkingFuturesCard *card = [[PPWorkingFuturesCard alloc] initWithUserPreferences:userPreferences];
-    NSString *socCode = userPreferences.likedJobs[arc4random_uniform(userPreferences.likedJobs.count)][@"soc"];
+    NSString *socCode = [self getUnusedSocCodeFromArrayOfPossibles:userPreferences.likedJobs];
     [apiClient GET:@"wf/predict" parameters:@{@"soc":socCode} success:^(AFHTTPRequestOperation *operation, id response){
         NSDictionary *responseDict = (NSDictionary *)response;
         NSArray *array = responseDict[@"predictedEmployment"];
@@ -40,6 +40,23 @@
         NSLog(@"getting job details failed: %@", error);
     }];
     return card;
+}
+
+- (NSString *)getUnusedSocCodeFromArrayOfPossibles:(NSArray *)socCodes {
+    NSArray *usedCodes = [[NSUserDefaults standardUserDefaults] arrayForKey:@"workingFuturesUsedSocCodes"];
+    if (!usedCodes) {
+        usedCodes = [[NSSet alloc] init];
+    }
+    NSMutableArray *mutableSocCodes = [socCodes mutableCopy];
+    [mutableSocCodes removeObjectsInArray:usedCodes];
+    if (mutableSocCodes.count == 0) {
+        return nil;
+    }
+    NSString *socCode = mutableSocCodes[arc4random_uniform(mutableSocCodes.count)][@"soc"];
+    NSMutableArray *mutableUsedCodes = [usedCodes mutableCopy];
+    [mutableUsedCodes addObject:socCode];
+    [[NSUserDefaults standardUserDefaults] setObject:mutableUsedCodes forKey:@"workingFuturesUsedSocCodes"];
+    return socCode;
 }
 
 @end

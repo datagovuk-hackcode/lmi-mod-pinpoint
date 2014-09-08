@@ -16,6 +16,5 @@
 }
 
 - (instancetype)initWithCardService:(PPCardService *)cardService;
-- (NSString *)getHtmlTemplateStringFromName:(NSString *)name;
 
 @end

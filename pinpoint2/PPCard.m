@@ -35,6 +35,7 @@
             self.html = [self.html stringByReplacingCharactersInRange:rangeOfDataKey withString:dataDictionary[dataKey]];
         }
     }
+    self.data = dataDictionary;
 }
 
 - (NSString *)getHtmlTemplateStringFromName:(NSString *)name {
@@ -52,6 +53,10 @@
     if (matches.count == 0) {
         self.isFinished = @(YES);
     }
+}
+
+- (bool)cardCanBeOutOfDate {
+    return NO;
 }
 
 @end

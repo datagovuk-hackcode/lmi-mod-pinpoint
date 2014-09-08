@@ -14,6 +14,7 @@
     self = [super init];
     if (self) {
         defaults = [NSUserDefaults standardUserDefaults];
+        versionOfUserPreferences = 0;
     }
     return  self;
 }
@@ -39,6 +40,7 @@
     } else {
         [defaults setObject:[[NSMutableArray alloc] initWithArray:@[@{@"keyword": keyword, @"points":@(points)}]] forKey:@"jobKeywords"];
     }
+    [self incrementVersionOfUserPreferences];
 }
 
 - (NSArray *)getArrayOfTopFiveKeywordsOrderedByPoints {
@@ -63,6 +65,7 @@
         [mutableJobs addObject:jobData];
         [defaults setObject:mutableJobs forKey:@"likedJobs"];
     }
+    [self incrementVersionOfUserPreferences];
 }
 
 - (PPUserPreferences *)getCurrentUserPreferences {
@@ -72,7 +75,23 @@
     if (jobKeyWords.count != 0) {
         [userPrefs setJobKeywords:[self getArrayOfTopFiveKeywordsOrderedByPoints]];
     }
+    [userPrefs setVersionOfPreferences:@([self getVersionOfUserPreferences])];
     return userPrefs;
+}
+
+- (NSInteger)getVersionOfUserPreferences {
+    return versionOfUserPreferences;
+}
+
+- (void)incrementVersionOfUserPreferences {
+    versionOfUserPreferences++;
+}
+
+- (bool)userPreferencesAreOutOfDate:(PPUserPreferences *)userPreferences {
+    if ([userPreferences.versionOfPreferences integerValue] + 5 < [self getVersionOfUserPreferences] ) {
+        return true;
+    }
+    return false;
 }
 
 + (instancetype)sharedInstance {

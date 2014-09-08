@@ -24,7 +24,6 @@ int socs[369]={1115,1116,1121,1122,1123,1131,1132,1133,1134,1135,1136,1139,1150,
         [card setHtmlWithDictionary:socDetails];
         [card setCardType:PPCardTypeJob];
         [card setValue:@(YES) forKey:@"isFinished"];
-        [card setData:socDetails];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error){
         NSLog(@"getting job details failed: %@", error);
     }];
@@ -38,7 +37,6 @@ int socs[369]={1115,1116,1121,1122,1123,1131,1132,1133,1134,1135,1136,1139,1150,
         [card setHtmlWithDictionary:socDetails];
         [card setCardType:PPCardTypeJob];
         [card setValue:@(YES) forKey:@"isFinished"];
-        [card setData:socDetails];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error){
         NSLog(@"getting job details failed: %@", error);
     }];
