@@ -129,4 +129,8 @@
     return sharedInstance;
 }
 
+- (NSArray*)getArrayOfKeywordsAndPointsOrderedByPoints{
+    return nil;
+}
+
 @end

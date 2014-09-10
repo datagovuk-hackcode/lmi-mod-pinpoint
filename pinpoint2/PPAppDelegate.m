@@ -17,10 +17,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+// Ignores the Unused expression result errors.
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-value"
     [[PPJobCardProvider alloc] initWithCardService:[PPCardService sharedInstance]];
     [[PPWorkingFuturesCardProvider alloc] initWithCardService:[PPCardService sharedInstance]];
     [[PPUnemploymentCardProvider alloc] initWithCardService:[PPCardService sharedInstance]];
     [[PPPayRegionCardProvider alloc] initWithCardService:[PPCardService sharedInstance]];
+    #pragma clang diagnostic pop
     [[UINavigationBar appearance] setBackgroundColor:[UIColor orangeColor]];
     
     [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:[NSBundle mainBundle].bundleIdentifier];

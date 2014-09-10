@@ -89,7 +89,7 @@
             CGAffineTransform transform = CGAffineTransformConcat(moveTransform, rotateTransform) ;
             
             // Apply the transformation to the content view
-            [[self contentView] setTransform:transform];
+            [self setTransform:transform];
             
             break;
         }
@@ -117,7 +117,7 @@
                 // Animate the 'throwing away' of the cell and update the collection view once it's completed
                 [UIView animateWithDuration:duration
                                  animations:^(){
-                                     [[self contentView] setTransform:transform];
+                                     [self setTransform:transform];
                                  }
                                  completion:^(BOOL finished){
                                      [self setDeleted:YES];
@@ -130,8 +130,8 @@
                 
             } else {
                 // The cell shouldn't be deleted: animate the content view back to its original position
-                [UIView animateWithDuration:1.f animations:^(){
-                    [[self contentView] setTransform:CGAffineTransformIdentity];
+                [UIView animateWithDuration:.3f animations:^(){
+                    [self setTransform:CGAffineTransformIdentity];
                 }];
             }
             
@@ -139,6 +139,7 @@
         }
             
         default: {
+            NSLog(@"Other case: %ld",[panGestureRecognizer state]);
             break;
         }
     }

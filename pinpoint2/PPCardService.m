@@ -45,7 +45,7 @@
     for (id<PPCardProviderInterface> cardProvider in cardProviders) {
         PPCard *card = [cardProvider provideCardFromUserPreferences:[[PPUserPreferencesStore sharedInstance] getCurrentUserPreferences]];
         if ([[card isFinished] boolValue] && ![cardsFinished containsObject:card]) {
-            [cardsFinished insertObject:card atIndex:arc4random_uniform(cardsFinished.count)];
+            [cardsFinished insertObject:card atIndex:arc4random_uniform((uint)cardsFinished.count)];
         } else if (card) {
             [cardsUnfinished addObject:card];
             [card addObserver:self forKeyPath:NSStringFromSelector(@selector(isFinished)) options:0 context:NULL];
@@ -57,7 +57,7 @@
     if ([object isKindOfClass:[PPCard class]]) {
         if ([keyPath isEqualToString:NSStringFromSelector(@selector(isFinished))]) {
             if (![cardsFinished containsObject:object]) {
-                [cardsFinished insertObject:object atIndex:arc4random_uniform(cardsFinished.count)];
+                [cardsFinished insertObject:object atIndex:arc4random_uniform((uint)cardsFinished.count)];
             }
             [cardsUnfinished removeObject:object];
             [object removeObserver:self forKeyPath:NSStringFromSelector(@selector(isFinished))];
@@ -70,7 +70,7 @@
 }
 
 - (bool)weHaveEnoughFinishedCards {
-    NSLog(@"number of cards ready to go: %d", cardsFinished.count);
+    NSLog(@"number of cards ready to go: %d", (uint)cardsFinished.count);
     return cardsFinished.count > 4;
 }
 

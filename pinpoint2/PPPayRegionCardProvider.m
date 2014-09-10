@@ -72,7 +72,7 @@
 }
 
 - (NSString *)getAnnualPayFromWeeklyPay:(NSString *)weeklyPayString {
-    int weeklyPay = [weeklyPayString integerValue];
+    int weeklyPay = (int)[weeklyPayString integerValue];
     int annualPay = weeklyPay*52;
     return [NSString stringWithFormat:@"%d", annualPay];
 }
