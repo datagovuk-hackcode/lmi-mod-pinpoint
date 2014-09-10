@@ -32,8 +32,8 @@
 {
     [super viewDidLoad];
     userPrefs = [[PPUserPreferencesStore sharedInstance] getCurrentUserPreferences];
-    [self.keywordsTextView setText:[userPrefs.jobKeywords componentsJoinedByString:@"\n"]];
-    [self.likedJobsTextView setText:[userPrefs.likedJobs componentsJoinedByString:@"\n"]];
+    [self.keywordsTextView setText:[[userPrefs.jobKeywords componentsJoinedByString:@" \n"] capitalizedString]];
+    [self.likedJobsTextView setText:[[userPrefs.likedJobs componentsJoinedByString:@" \n"] capitalizedString]];
 }
 
 - (void)didReceiveMemoryWarning

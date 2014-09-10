@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="FmE-h9-rSq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="FmE-h9-rSq">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--Card Collection View Controller - Pinpoint-->
+        <!--Pinpoint-->
         <scene sceneID="7gW-9N-dib">
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="RWx-MZ-sR8" customClass="PPCardCollectionViewController" sceneMemberID="viewController">
@@ -194,7 +194,7 @@
             </objects>
             <point key="canvasLocation" x="630" y="45"/>
         </scene>
-        <!--User Preferences View Controller - Your Data-->
+        <!--Your Data-->
         <scene sceneID="0Wy-wf-BuM">
             <objects>
                 <viewController title="Your Data" id="T1w-qG-vHu" customClass="PPUserPreferencesViewController" sceneMemberID="viewController">
@@ -237,7 +237,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liked Jobs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VNl-6g-h9J">
                                 <rect key="frame" x="20" y="247" width="84" height="21"/>
@@ -368,7 +368,7 @@
             </objects>
             <point key="canvasLocation" x="104" y="45"/>
         </scene>
-        <!--Vacancy Detail View Controller - Vacancy-->
+        <!--Vacancy-->
         <scene sceneID="zi9-Bx-Zpf">
             <objects>
                 <tableViewController id="VQi-wr-3T9" customClass="JHVacancyDetailViewController" sceneMemberID="viewController">
@@ -499,7 +499,7 @@
             </objects>
             <point key="canvasLocation" x="1607" y="715"/>
         </scene>
-        <!--Vacancies Table View Controller - Recommended Vacancies-->
+        <!--Recommended Vacancies-->
         <scene sceneID="x6u-wN-ZuT">
             <objects>
                 <tableViewController id="sSS-bj-8y9" customClass="PPVacanciesTableViewController" sceneMemberID="viewController">
