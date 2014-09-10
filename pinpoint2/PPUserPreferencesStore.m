@@ -109,10 +109,6 @@
     return sharedInstance;
 }
 
-- (NSArray*)getArrayOfKeywordsAndPointsOrderedByPoints{
-    return nil;
-}
-
 ///IN CASE WE NEED IT
 //- (void)saveCard:(NSObject *)card forSocCode:(NSString *)socCode {
 //    NSMutableDictionary *savedCards = [defaults objectForKey:@"savedCards"];
@@ -139,6 +135,5 @@
 //    }
 //    return unarchivedCards;
 //}
-
 
 @end
