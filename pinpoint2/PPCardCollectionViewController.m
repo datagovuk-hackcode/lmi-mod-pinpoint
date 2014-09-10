@@ -128,6 +128,14 @@
     [self getCardsFromCardService:3];
 }
 
+- (void)cardDidBeginPanning:(PPCardCollectionViewCell *)cardCell{
+    self.collectionView.scrollEnabled = NO;
+}
+
+- (void)cardDidEndPanning:(PPCardCollectionViewCell *)cardCell{
+    self.collectionView.scrollEnabled = YES;
+}
+
 /*
 #pragma mark - Navigation
 
