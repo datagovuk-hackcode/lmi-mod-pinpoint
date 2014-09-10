@@ -36,19 +36,8 @@
             NSLog(@"No keywords...");
             return;
         }
-        NSString *favouriteKeyword = topKeywords[0];
-        NSString *secondFavouriteKeyword = topKeywords.count >=1 ? topKeywords[1] : nil;
-        if (favouriteKeyword == nil) {
-            
-        } else {
-            if (secondFavouriteKeyword == nil){
-                [self searchForString:favouriteKeyword];
-                NSLog(@"Finding jobs for keyword '%@'",favouriteKeyword);
-            }else{
-                [self searchForString:[NSString stringWithFormat:@"%@ OR %@",favouriteKeyword,secondFavouriteKeyword]];
-                NSLog(@"Finding jobs for keywords '%@' and '%@'", favouriteKeyword, secondFavouriteKeyword);
-            }
-        }
+        NSString *searchString = [topKeywords componentsJoinedByString:@" OR "];
+        [self searchForString:searchString];
     }
 }
 
