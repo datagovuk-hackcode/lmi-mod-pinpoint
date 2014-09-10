@@ -47,6 +47,10 @@
 		4A207BFA195D83D000ADBC76 /* PPJobCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A207BF9195D83D000ADBC76 /* PPJobCard.m */; };
 		4A207BFD195D997000ADBC76 /* PPWorkingFuturesCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A207BFC195D997000ADBC76 /* PPWorkingFuturesCard.m */; };
 		4A207BFF195F1FCB00ADBC76 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A207BFE195F1FCB00ADBC76 /* QuartzCore.framework */; };
+		4AB479BF19C085B000018132 /* JHVacancy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB479BA19C085B000018132 /* JHVacancy.m */; };
+		4AB479C019C085B000018132 /* JHVacancyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB479BC19C085B000018132 /* JHVacancyDetailViewController.m */; };
+		4AB479C119C085B000018132 /* PPVacanciesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB479BE19C085B000018132 /* PPVacanciesTableViewController.m */; };
+		4AB479C419C0862200018132 /* MKMapView+ZoomLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB479C319C0862200018132 /* MKMapView+ZoomLevel.m */; };
 		4AB81E6619C071AE0052FD05 /* card-style.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AB81E6419C071AE0052FD05 /* card-style.css */; };
 		90A0FAF7A36C49B09F24D8EB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 368FD67F4D394160AA34578D /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -131,6 +135,14 @@
 		4A207BFB195D997000ADBC76 /* PPWorkingFuturesCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPWorkingFuturesCard.h; sourceTree = "<group>"; };
 		4A207BFC195D997000ADBC76 /* PPWorkingFuturesCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPWorkingFuturesCard.m; sourceTree = "<group>"; };
 		4A207BFE195F1FCB00ADBC76 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4AB479B919C085B000018132 /* JHVacancy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHVacancy.h; sourceTree = "<group>"; };
+		4AB479BA19C085B000018132 /* JHVacancy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHVacancy.m; sourceTree = "<group>"; };
+		4AB479BB19C085B000018132 /* JHVacancyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHVacancyDetailViewController.h; sourceTree = "<group>"; };
+		4AB479BC19C085B000018132 /* JHVacancyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHVacancyDetailViewController.m; sourceTree = "<group>"; };
+		4AB479BD19C085B000018132 /* PPVacanciesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPVacanciesTableViewController.h; sourceTree = "<group>"; };
+		4AB479BE19C085B000018132 /* PPVacanciesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPVacanciesTableViewController.m; sourceTree = "<group>"; };
+		4AB479C219C0862200018132 /* MKMapView+ZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+ZoomLevel.h"; sourceTree = "<group>"; };
+		4AB479C319C0862200018132 /* MKMapView+ZoomLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+ZoomLevel.m"; sourceTree = "<group>"; };
 		4AB81E6419C071AE0052FD05 /* card-style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "card-style.css"; sourceTree = "<group>"; };
 		C0B8BFE179394B65A5ECDCC7 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,6 +218,7 @@
 				4A207BF4195D606A00ADBC76 /* Controllers and View */,
 				4A207BCC195C2EB600ADBC76 /* PPCardService.h */,
 				4A207BCD195C2EB600ADBC76 /* PPCardService.m */,
+				4AB479B819C0858D00018132 /* Vacancies */,
 				4A207BF3195D605700ADBC76 /* Cards */,
 				4A207BF6195D60B100ADBC76 /* Data store and Object Representations */,
 				4A207BF5195D608300ADBC76 /* Card Data Providers */,
@@ -316,6 +329,21 @@
 				4A207BE5195C4BE900ADBC76 /* PPUserPreferencesStore.m */,
 			);
 			name = "Data store and Object Representations";
+			sourceTree = "<group>";
+		};
+		4AB479B819C0858D00018132 /* Vacancies */ = {
+			isa = PBXGroup;
+			children = (
+				4AB479C219C0862200018132 /* MKMapView+ZoomLevel.h */,
+				4AB479C319C0862200018132 /* MKMapView+ZoomLevel.m */,
+				4AB479B919C085B000018132 /* JHVacancy.h */,
+				4AB479BA19C085B000018132 /* JHVacancy.m */,
+				4AB479BB19C085B000018132 /* JHVacancyDetailViewController.h */,
+				4AB479BC19C085B000018132 /* JHVacancyDetailViewController.m */,
+				4AB479BD19C085B000018132 /* PPVacanciesTableViewController.h */,
+				4AB479BE19C085B000018132 /* PPVacanciesTableViewController.m */,
+			);
+			name = Vacancies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,12 +494,15 @@
 				4A207BD1195C2FF200ADBC76 /* PPCard.m in Sources */,
 				4A207BCA195C230E00ADBC76 /* PPCardCollectionViewCell.m in Sources */,
 				4A207BDA195C343500ADBC76 /* PPJobCardProvider.m in Sources */,
+				4AB479C019C085B000018132 /* JHVacancyDetailViewController.m in Sources */,
 				4A207BC7195C226C00ADBC76 /* PPCardCollectionViewController.m in Sources */,
 				4A207BA1195C212000ADBC76 /* PPAppDelegate.m in Sources */,
+				4AB479C119C085B000018132 /* PPVacanciesTableViewController.m in Sources */,
 				4A207BE6195C4BE900ADBC76 /* PPUserPreferencesStore.m in Sources */,
 				4A207BEC195D38C800ADBC76 /* PPLoadingCollectionViewCell.m in Sources */,
 				4A207BFA195D83D000ADBC76 /* PPJobCard.m in Sources */,
 				4A207BCE195C2EB600ADBC76 /* PPCardService.m in Sources */,
+				4AB479BF19C085B000018132 /* JHVacancy.m in Sources */,
 				4A207BDE195C39A300ADBC76 /* PPCardProvider.m in Sources */,
 				4A207BFD195D997000ADBC76 /* PPWorkingFuturesCard.m in Sources */,
 				4A207BD7195C341E00ADBC76 /* PPWorkingFuturesCardProvider.m in Sources */,
@@ -480,6 +511,7 @@
 				4A207BE9195C5C2D00ADBC76 /* PPCollectionViewFlowLayout.m in Sources */,
 				4A0E964C19B639300069A8C1 /* PPUserPreferencesViewController.m in Sources */,
 				4A12162019BF606D0034ED6A /* PPPayRegionCard.m in Sources */,
+				4AB479C419C0862200018132 /* MKMapView+ZoomLevel.m in Sources */,
 				4A207BD4195C300800ADBC76 /* PPUserPreferences.m in Sources */,
 				4A12161719BE46790034ED6A /* PPUnemploymentCardProvider.m in Sources */,
 				4A12161A19BE46930034ED6A /* PPUnemploymentCard.m in Sources */,

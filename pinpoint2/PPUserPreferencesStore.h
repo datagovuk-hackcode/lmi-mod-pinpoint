@@ -14,8 +14,8 @@
     NSInteger versionOfUserPreferences;
 }
 
+- (NSArray *)getArrayOfTopFiveKeywordsOrderedByPoints;
 - (void)addPoints:(NSInteger)points forKeyword:(NSString *)keyword;
-- (NSArray *)getArrayOfKeywordsAndPointsOrderedByPoints;
 - (void)addLikedJobData:(NSDictionary *)jobData;
 - (PPUserPreferences *)getCurrentUserPreferences;
 - (void)saveCard:(NSObject *)card forSocCode:(NSString *)socCode;
