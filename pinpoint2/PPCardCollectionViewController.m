@@ -100,14 +100,14 @@
 
 - (void)getCardsFromCardServiceIfTheresNotEnough {
     if (self.cards.count < MIN_NUM_CARDS) {
-        [self getCardsFromCardService:(MIN_NUM_CARDS - self.cards.count)];
+        [self getCardsFromCardService:(MIN_NUM_CARDS - (int)self.cards.count)];
     }
 }
 
 - (void)getCardsFromCardService:(int)numOfCards {
-    int oldNumOfCards = self.cards.count;
+    int oldNumOfCards = (int)self.cards.count;
     [self.cards addObjectsFromArray:[self.cardService getNumberOfCards:numOfCards]];
-    int newNumOfCards = self.cards.count;
+    int newNumOfCards = (int)self.cards.count;
     [self.collectionView insertItemsAtIndexPaths:[self getIndexPathsOfNewlyInsertedCardsFromOldNumberOfCards:oldNumOfCards andNewNumOfCards:newNumOfCards]];
     if (self.cards.count >= MIN_NUM_CARDS) {
         [getCardsTimer invalidate];

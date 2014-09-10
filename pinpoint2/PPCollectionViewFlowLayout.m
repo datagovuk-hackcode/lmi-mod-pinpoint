@@ -30,11 +30,11 @@
         }
     }
     //NSLog(@"%d %d", newAttributes.count, attributes.count);
-    NSArray *attrsList = [super layoutAttributesForElementsInRect:rect];
+//    NSArray *attrsList = [super layoutAttributesForElementsInRect:rect];
     
-    for (UICollectionViewLayoutAttributes *attrs in attrsList) {
-        //NSLog(@"%f %f", attrs.frame.origin.x, attrs.frame.origin.y);
-    }
+//    for (UICollectionViewLayoutAttributes *attrs in attrsList) {
+//        NSLog(@"%f %f", attrs.frame.origin.x, attrs.frame.origin.y);
+//    }
     return newAttributes;
 }
 

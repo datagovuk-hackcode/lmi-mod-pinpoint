@@ -41,13 +41,15 @@
     if (mutableSocCodes.count == 0) {
         return nil;
     }
-    NSString *socCode = mutableSocCodes[arc4random_uniform(mutableSocCodes.count)];
+    NSString *socCode = mutableSocCodes[arc4random_uniform((uint)mutableSocCodes.count)];
     NSMutableArray *mutableUsedCodes = [usedCodes mutableCopy];
     [mutableUsedCodes addObject:socCode];
     [[NSUserDefaults standardUserDefaults] setObject:mutableUsedCodes forKey:keyForUsedCodes];
     return socCode;
 }
 
-
+- (PPCard*)provideCardFromUserPreferences:(PPUserPreferences *)userPreferences{
+    return nil;
+}
 
 @end
