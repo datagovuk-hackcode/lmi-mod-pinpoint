@@ -32,13 +32,14 @@
     [apiClient GET:@"ashe/estimatePay" parameters:@{@"soc":socCode, @"breakdown":@"region"} success:^(AFHTTPRequestOperation *operation, id response){
         NSDictionary *responseDict = (NSDictionary *)response;
         NSArray *breakdown = responseDict[@"series"][0][@"breakdown"];
-        for (int i = 0; i < breakdown.count; i++) {
-//            NSMutableDictionary *mutableRegionAndPay = [breakdown[i] mutableCopy];
-//            [mutableRegionAndPay setObject:[self getRegionNameFromCode:breakdown[i][@"region"]] forKey:@"regionName"];
-//            [mutableRegionAndPay setObject:[self getRegionNameFromCode:breakdown[i][@"region"]] forKey:@"regionName"];
-//            ((NSDictionary *)breakdown[i]) = mutableRegionAndPay;
+        NSMutableArray *arrayOfReadableData = [[NSMutableArray alloc] init];
+        for (NSDictionary *regionAndPay in breakdown) {
+            NSMutableDictionary *mutableRegionAndPay = [regionAndPay mutableCopy];
+            [mutableRegionAndPay setObject:[self getRegionNameFromCode:(int)regionAndPay[@"region"]] forKey:@"regionName"];
+            [mutableRegionAndPay setObject:[self getAnnualPayFromWeeklyPay:regionAndPay[@"estpay"]] forKey:@"yearlyPay"];
+            [arrayOfReadableData addObject:mutableRegionAndPay];
         }
-        [card addDataToCard:@{@"breakdown":breakdown}];
+        [card addDataToCard:@{@"breakdown":arrayOfReadableData}];
         [card setCardAsFinishedIfDataIsAllPresentAndRenderTheHtml];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error){
         NSLog(@"error: %@", error);
@@ -61,17 +62,17 @@
     }];
 }
         
-- (NSString *)getRegionNameFromCode:(NSString *)code {
+- (NSString *)getRegionNameFromCode:(int)code {
     for (NSDictionary *regionCode in regionCodes) {
-        if ([regionCode[@"value"] isEqualToString:code]) {
+        if ((int)regionCode[@"value"] == code) {
             return regionCode[@"name"];
         }
     }
-    return nil;
+    return @"unknown region";
 }
 
 - (NSString *)getAnnualPayFromWeeklyPay:(NSString *)weeklyPayString {
-    int weeklyPay = [weeklyPayString intValue];
+    int weeklyPay = [weeklyPayString integerValue];
     int annualPay = weeklyPay*52;
     return [NSString stringWithFormat:@"%d", annualPay];
 }

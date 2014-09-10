@@ -13,7 +13,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.html = [self getHtmlTemplateStringFromName:@"working-futures-card"];
+        self.html = [self getHtmlTemplateStringFromName:@"pay-region-card"];
     }
     return self;
 }
@@ -27,7 +27,7 @@
 }
 
 - (NSArray *)listOfDataKeysThatMustBePresentToIndicateThatAllCallsToApiHaveBeenMade {
-    return @[@"title", @"workingFuturesCommaSeparatedList"];
+    return @[@"title", @"breakdown"];
 }
 
 @end
