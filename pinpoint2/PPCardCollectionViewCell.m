@@ -71,6 +71,14 @@
     return self;
 }
 
+- (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)panGestureRecognizer {
+    if ([panGestureRecognizer.class isSubclassOfClass:UIPanGestureRecognizer.class]){
+        CGPoint velocity = [panGestureRecognizer velocityInView:self];
+        return fabs(velocity.x) > fabs(velocity.y);
+    }
+    return YES;
+}
+
 - (void)panGestureRecognizerDidChange:(UIPanGestureRecognizer *)panGestureRecognizer {
     if ([self isDeleted]) {
         // The cell should be deleted, leave the state of the cell as it is
@@ -79,17 +87,24 @@
     }
     
     // Percent holds a float value between -1 and 1 that indicates how much the user moved his finger relative to the width of the cell
-    CGFloat percent = [panGestureRecognizer translationInView:self].x / [self frame].size.width;
+    CGFloat percentWidth = [panGestureRecognizer translationInView:self].x / [self frame].size.width;
+    CGFloat percentHeight = [panGestureRecognizer translationInView:self].y / [self frame].size.height;
     
     switch ([panGestureRecognizer state]) {
         case UIGestureRecognizerStateChanged: {
             // Create the 'throw animation' and base its current state on the percent
-            CGAffineTransform moveTransform = CGAffineTransformMakeTranslation(percent * [self frame].size.width, 0.f);
-            CGAffineTransform rotateTransform = CGAffineTransformMakeRotation(percent * M_PI / 20.f);
+            CGAffineTransform moveTransform = CGAffineTransformMakeTranslation(percentWidth * [self frame].size.width, percentHeight * self.frame.size.height);
+            CGAffineTransform rotateTransform = CGAffineTransformMakeRotation(percentWidth * M_PI / 20.f);
             CGAffineTransform transform = CGAffineTransformConcat(moveTransform, rotateTransform) ;
             
             // Apply the transformation to the content view
             [self setTransform:transform];
+            
+            if ([self.cardActionDelegate respondsToSelector:@selector(cardDidBeginPanning:)]){
+                [self.cardActionDelegate cardDidBeginPanning:self];
+            }
+            
+            [self.superview bringSubviewToFront:self];
             
             break;
         }
@@ -97,10 +112,13 @@
         case UIGestureRecognizerStateFailed:
         case UIGestureRecognizerStateEnded:
         case UIGestureRecognizerStateCancelled: {
+            if ([self.cardActionDelegate respondsToSelector:@selector(cardDidBeginPanning:)]){
+                [self.cardActionDelegate cardDidEndPanning:self];
+            }
             // Delete the current cell if the absolute value of the percent is above O.7 or the absolute value of the velocity of the gesture is above 600
-            if (fabsf(percent) > 0.7f || fabsf([panGestureRecognizer velocityInView:self].x) > 600.f) {
+            if (fabsf(percentWidth) > 0.7f || fabsf([panGestureRecognizer velocityInView:self].x) > 600.f) {
                 // The direction is -1 if the gesture is going left and 1 if it's going right
-                CGFloat direction = percent < 0.f ? -1.f : 1.f;
+                CGFloat direction = percentWidth < 0.f ? -1.f : 1.f;
                 // Multiply the direction to make sure the content view will be removed entirely from the screen
                 direction *= 2.0f;
                 
@@ -139,6 +157,9 @@
         }
             
         default: {
+            if ([self.cardActionDelegate respondsToSelector:@selector(cardDidBeginPanning:)]){
+                [self.cardActionDelegate cardDidBeginPanning:self];
+            }
             NSLog(@"Other case: %ld",[panGestureRecognizer state]);
             break;
         }

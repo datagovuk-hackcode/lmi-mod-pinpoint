@@ -15,4 +15,8 @@
 - (void)cardWasSwipedLeft:(PPCardCollectionViewCell *)cardCell;
 - (void)cardWasSwipedRight:(PPCardCollectionViewCell *)cardCell;
 
+@optional
+- (void)cardDidBeginPanning:(PPCardCollectionViewCell *)cardCell;
+- (void)cardDidEndPanning:(PPCardCollectionViewCell *)cardCell;
+
 @end

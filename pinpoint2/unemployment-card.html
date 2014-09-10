@@ -1,14 +1,8 @@
 <html>
     <script src="jquery-2.1.0.min.js"></script>
     <script src="Chart.js"></script>
+    <link href="card-style.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
-        canvas#myChart {
-            padding: 0px;
-            display:block;
-            overflow:hidden;
-            width:100%;
-            height:100%;
-        }
     body {
         background: rgba(255,255,255,0);
         margin:0px;
@@ -16,7 +10,7 @@
     }
     </style>
     <body>
-        <div style="width:100%; height:100%;">
+        <div style="width:100%; height:100%;" class="card">
             <h3>Unemployment for {{title}}</h3>
             <canvas height="220" width="300" id="myChart"></canvas>
             <script>

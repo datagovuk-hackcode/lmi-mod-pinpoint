@@ -139,10 +139,19 @@
     [self getCardsFromCardService:3];
 }
 
+
 - (void)dismissCell:(UICollectionViewCell *)cell {
     NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
     [self.cards removeObjectAtIndex:indexPath.item];
     [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
+}
+    
+- (void)cardDidBeginPanning:(PPCardCollectionViewCell *)cardCell {
+    self.collectionView.scrollEnabled = NO;
+}
+
+- (void)cardDidEndPanning:(PPCardCollectionViewCell *)cardCell {
+    self.collectionView.scrollEnabled = YES;
 }
 
 /*
