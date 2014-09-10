@@ -10,7 +10,7 @@
 
 ---
 
-Pinpoint is Tinder for jobs.
+Pinpoint is Tinder for jobs. Version 1 was developed for the June 2014 LMI for All mod day by [Harry Jones] and [Phil Hardwick]. Version 2 is a refactored and improved version started by [Phil Hardwick] and worked on at the September 2014 LMI for All mod day by Phil and Harry.
 
 ---
 
