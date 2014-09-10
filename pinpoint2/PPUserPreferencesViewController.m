@@ -9,6 +9,7 @@
 #import "PPUserPreferencesViewController.h"
 #import "PPUserPreferencesStore.h"
 #import "PPUserPreferences.h"
+#import "PPUserCardCollectionViewController.h"
 
 @interface PPUserPreferencesViewController () {
     PPUserPreferences *userPrefs;
@@ -58,15 +59,16 @@
     return cell;
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    PPUserCardCollectionViewController *vc = [segue destinationViewController];
+    [vc setSocCode:userPrefs.likedJobs[indexPath.row][@"soc"]];
 }
-*/
+
 
 @end

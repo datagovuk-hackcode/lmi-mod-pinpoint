@@ -13,5 +13,7 @@
 @property (nonatomic, retain) IBOutlet UITextView *keywordsTextView;
 @property (nonatomic, retain) IBOutlet UITextView *likedJobsTextView;
 
+@property (nonatomic, retain) IBOutlet UITableView *tableView;
+
 
 @end
