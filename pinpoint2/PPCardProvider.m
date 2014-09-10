@@ -49,6 +49,7 @@
 }
 
 - (PPCard*)provideCardFromUserPreferences:(PPUserPreferences *)userPreferences{
+    NSAssert(NO, @"This should never be called. You should implement the method provideCardFromUserPreferences: in your subclass.");
     return nil;
 }
 
