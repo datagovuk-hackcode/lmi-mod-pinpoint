@@ -101,14 +101,6 @@
     return true;
 }
 
-- (void)handleLike {
-    
-}
-
-- (void)handleDislike {
-    
-}
-
 - (void)encodeWithCoder:(NSCoder *)coder;
 {
     [coder encodeObject:self.html forKey:@"html"];

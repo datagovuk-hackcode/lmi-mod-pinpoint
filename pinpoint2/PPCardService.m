@@ -17,6 +17,7 @@
         cardsUnfinished = [[NSMutableArray alloc] init];
         cardProviders = [[NSMutableArray alloc] init];
         timer = [NSTimer scheduledTimerWithTimeInterval:4.0f target:self selector:@selector(getCardsFromProviders) userInfo:nil repeats:YES];
+        [self getCardsFromProviders];
     }
     return self;
 }
