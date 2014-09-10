@@ -110,4 +110,7 @@
     return NO;
 }
 
+- (void)handleLike {}
+- (void)handleDislike {}
+
 @end
