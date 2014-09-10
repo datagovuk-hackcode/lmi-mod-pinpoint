@@ -54,6 +54,8 @@
 		4A25A25819C06F72001DEECF /* next-qualification-card.html in Resources */ = {isa = PBXBuildFile; fileRef = 4A25A25719C06F72001DEECF /* next-qualification-card.html */; };
 		4A25A25B19C06FCA001DEECF /* PPNextQualificationCardProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A25A25A19C06FCA001DEECF /* PPNextQualificationCardProvider.m */; };
 		4A25A25E19C06FF2001DEECF /* PPNextQualificationCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A25A25D19C06FF2001DEECF /* PPNextQualificationCard.m */; };
+		4A25A26119C088C0001DEECF /* PPUserCardCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A25A26019C088C0001DEECF /* PPUserCardCollectionViewController.m */; };
+		4A25A26419C0896C001DEECF /* PPUserCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A25A26319C0896C001DEECF /* PPUserCardCell.m */; };
 		4AB81E6619C071AE0052FD05 /* card-style.css in Resources */ = {isa = PBXBuildFile; fileRef = 4AB81E6419C071AE0052FD05 /* card-style.css */; };
 		90A0FAF7A36C49B09F24D8EB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 368FD67F4D394160AA34578D /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -152,6 +154,10 @@
 		4A25A25A19C06FCA001DEECF /* PPNextQualificationCardProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPNextQualificationCardProvider.m; sourceTree = "<group>"; };
 		4A25A25C19C06FF2001DEECF /* PPNextQualificationCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPNextQualificationCard.h; sourceTree = "<group>"; };
 		4A25A25D19C06FF2001DEECF /* PPNextQualificationCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPNextQualificationCard.m; sourceTree = "<group>"; };
+		4A25A25F19C088C0001DEECF /* PPUserCardCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPUserCardCollectionViewController.h; sourceTree = "<group>"; };
+		4A25A26019C088C0001DEECF /* PPUserCardCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPUserCardCollectionViewController.m; sourceTree = "<group>"; };
+		4A25A26219C0896C001DEECF /* PPUserCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPUserCardCell.h; sourceTree = "<group>"; };
+		4A25A26319C0896C001DEECF /* PPUserCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPUserCardCell.m; sourceTree = "<group>"; };
 		4AB81E6419C071AE0052FD05 /* card-style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "card-style.css"; sourceTree = "<group>"; };
 		C0B8BFE179394B65A5ECDCC7 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -314,6 +320,10 @@
 				4A25A25019C067B7001DEECF /* PPQualificationQuestionCell.h */,
 				4A25A25119C067B7001DEECF /* PPQualificationQuestionCell.m */,
 				4A25A25319C06B0E001DEECF /* PPCellDismisser.h */,
+				4A25A25F19C088C0001DEECF /* PPUserCardCollectionViewController.h */,
+				4A25A26019C088C0001DEECF /* PPUserCardCollectionViewController.m */,
+				4A25A26219C0896C001DEECF /* PPUserCardCell.h */,
+				4A25A26319C0896C001DEECF /* PPUserCardCell.m */,
 			);
 			name = "Controllers and View";
 			sourceTree = "<group>";
@@ -501,7 +511,9 @@
 			files = (
 				4A25A25E19C06FF2001DEECF /* PPNextQualificationCard.m in Sources */,
 				4A207BD1195C2FF200ADBC76 /* PPCard.m in Sources */,
+				4A25A26419C0896C001DEECF /* PPUserCardCell.m in Sources */,
 				4A25A25B19C06FCA001DEECF /* PPNextQualificationCardProvider.m in Sources */,
+				4A25A26119C088C0001DEECF /* PPUserCardCollectionViewController.m in Sources */,
 				4A207BCA195C230E00ADBC76 /* PPCardCollectionViewCell.m in Sources */,
 				4A207BDA195C343500ADBC76 /* PPJobCardProvider.m in Sources */,
 				4A25A25619C06C2F001DEECF /* PPNonHtmlCardProvider.m in Sources */,

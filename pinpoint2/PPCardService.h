@@ -11,6 +11,7 @@
 #import "PPCardProviderInterface.h"
 
 @interface PPCardService : NSObject {
+    NSMutableArray *cardsSwiped;
     NSMutableArray *cardsFinished;
     NSMutableArray *cardsUnfinished;
     NSMutableArray *cardProviders;
@@ -20,6 +21,8 @@
 - (NSArray *)getNumberOfCards:(NSInteger)numOfCards;
 
 - (void)registerAsACardProvider:(id<PPCardProviderInterface>)cardProvider;
+
+- (NSArray *)getShownCardsForSocCode:(NSString *)socCode;
 
 + (instancetype)sharedInstance;
 
