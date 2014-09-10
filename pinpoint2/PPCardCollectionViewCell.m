@@ -160,7 +160,6 @@
             if ([self.cardActionDelegate respondsToSelector:@selector(cardDidBeginPanning:)]){
                 [self.cardActionDelegate cardDidBeginPanning:self];
             }
-            NSLog(@"Other case: %ld",[panGestureRecognizer state]);
             break;
         }
     }
