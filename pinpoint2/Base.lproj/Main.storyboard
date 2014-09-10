@@ -222,7 +222,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="rfT-u6-mnu" kind="push" id="XBw-TC-lJr"/>
+                                            <segue destination="rfT-u6-mnu" kind="push" identifier="userCardsSegue" id="XBw-TC-lJr"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -368,7 +368,7 @@
             </objects>
             <point key="canvasLocation" x="104" y="45"/>
         </scene>
-        <!--Vacancy-->
+        <!--Vacancy Detail View Controller - Vacancy-->
         <scene sceneID="zi9-Bx-Zpf">
             <objects>
                 <tableViewController id="VQi-wr-3T9" customClass="JHVacancyDetailViewController" sceneMemberID="viewController">
@@ -499,7 +499,7 @@
             </objects>
             <point key="canvasLocation" x="1607" y="715"/>
         </scene>
-        <!--Recommended Vacancies-->
+        <!--Vacancies Table View Controller - Recommended Vacancies-->
         <scene sceneID="x6u-wN-ZuT">
             <objects>
                 <tableViewController id="sSS-bj-8y9" customClass="PPVacanciesTableViewController" sceneMemberID="viewController">

@@ -65,7 +65,7 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue isKindOfClass:PPUserCardCollectionViewController.class]){
+    if ([segue.identifier isEqualToString:@"userCardsSegue"]){
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         PPUserCardCollectionViewController *vc = [segue destinationViewController];
         [vc setSocCode:userPrefs.likedJobs[indexPath.row][@"soc"]];
