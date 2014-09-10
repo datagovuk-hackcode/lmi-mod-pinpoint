@@ -13,7 +13,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        cardsSwiped = [[NSMutableArray alloc] init];
+        cardsShownOnUI = [[NSMutableArray alloc] init];
         cardsFinished = [[NSMutableArray alloc] init];
         cardsUnfinished = [[NSMutableArray alloc] init];
         cardProviders = [[NSMutableArray alloc] init];
@@ -28,11 +28,11 @@
     if (cardsFinished.count < numOfCards) {
         cardsToReturn = [NSArray arrayWithArray:cardsFinished];
         [cardsFinished removeAllObjects];
-        [cardsSwiped addObjectsFromArray:cardsFinished];
+        [cardsShownOnUI addObjectsFromArray:cardsToReturn];
     } else {
         cardsToReturn = [NSArray arrayWithArray:[cardsFinished objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, numOfCards)]]];
         [cardsFinished removeObjectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, numOfCards)]];
-        [cardsSwiped addObjectsFromArray:cardsToReturn];
+        [cardsShownOnUI addObjectsFromArray:cardsToReturn];
     }
     return cardsToReturn;
 }
@@ -43,7 +43,7 @@
 
 - (NSArray *)getShownCardsForSocCode:(NSString *)socCode {
     NSMutableArray *cardsToReturn = [[NSMutableArray alloc] init];
-    for (PPCard *card in cardsSwiped) {
+    for (PPCard *card in cardsShownOnUI) {
         if ([[card.data objectForKey:@"soc"] isEqual:socCode]) {
             [cardsToReturn addObject:card];
         }
