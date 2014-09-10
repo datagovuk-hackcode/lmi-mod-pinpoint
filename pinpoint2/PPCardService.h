@@ -11,7 +11,7 @@
 #import "PPCardProviderInterface.h"
 
 @interface PPCardService : NSObject {
-    NSMutableArray *cardsSwiped;
+    NSMutableArray *cardsShownOnUI;
     NSMutableArray *cardsFinished;
     NSMutableArray *cardsUnfinished;
     NSMutableArray *cardProviders;
