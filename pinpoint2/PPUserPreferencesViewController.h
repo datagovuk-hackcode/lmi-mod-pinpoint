@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PPUserPreferencesViewController : UIViewController
+@interface PPUserPreferencesViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, retain) IBOutlet UITextView *keywordsTextView;
 @property (nonatomic, retain) IBOutlet UITextView *likedJobsTextView;

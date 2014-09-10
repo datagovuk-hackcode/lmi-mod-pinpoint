@@ -20,23 +20,19 @@
 }
 
 - (void)handleLike {
+    [super handleLike];
     NSArray *keywordGroups = self.data[@"add_titles"];
     for (NSString *keywordGroup in keywordGroups) {
-//        NSArray *keywords = [keywordGroup componentsSeparatedByString:@", "];
-//        for (NSString *keyword in keywords) {
-            [userPrefsStore addPoints:1 forKeyword:keywordGroup];
-//        }
+        [userPrefsStore addPoints:1 forKeyword:keywordGroup];
     }
     [userPrefsStore addLikedJobData:self.data];
 }
 
 - (void)handleDislike {
+    [super handleDislike];
     NSArray *keywordGroups = self.data[@"add_titles"];
     for (NSString *keywordGroup in keywordGroups) {
-//        NSArray *keywords = [keywordGroup componentsSeparatedByString:@", "];
-//        for (NSString *keyword in keywords) {
-            [userPrefsStore addPoints:-1 forKeyword:keywordGroup];
-//        }
+        [userPrefsStore addPoints:-1 forKeyword:keywordGroup];
     }
 }
 

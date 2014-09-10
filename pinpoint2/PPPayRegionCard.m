@@ -19,7 +19,7 @@
 }
 
 - (void)handleLike {
-    
+    [super handleLike];
 }
 
 - (void)handleDislike {

@@ -365,6 +365,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Philip Hardwick";
 				TargetAttributes = {
+					4A207B8C195C212000ADBC76 = {
+						DevelopmentTeam = 4JJLC9B35H;
+					};
 					4A207BAD195C212000ADBC76 = {
 						TestTargetID = 4A207B8C195C212000ADBC76;
 					};
@@ -599,12 +602,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C0B8BFE179394B65A5ECDCC7 /* Pods.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pinpoint2/pinpoint2-Prefix.pch";
 				INFOPLIST_FILE = "pinpoint2/pinpoint2-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -613,12 +620,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C0B8BFE179394B65A5ECDCC7 /* Pods.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pinpoint2/pinpoint2-Prefix.pch";
 				INFOPLIST_FILE = "pinpoint2/pinpoint2-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PPUserPreferences : NSObject
+@interface PPUserPreferences : NSObject <NSCoding>
 
 @property (strong, nonatomic) NSArray *jobKeywords;
 @property (strong, nonatomic) NSNumber *isInterestedInQualifications;

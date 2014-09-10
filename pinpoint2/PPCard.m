@@ -100,6 +100,34 @@
     }
     return true;
 }
+
+- (void)handleLike {
+    
+}
+
+- (void)handleDislike {
+    
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder;
+{
+    [coder encodeObject:self.html forKey:@"html"];
+    [coder encodeObject:self.data forKey:@"data"];
+    //[coder encodeObject:self.userPreferences forKey:@"userPreferences"];
+}
+
+- (id)initWithCoder:(NSCoder *)coder;
+{
+    self = [[PPCard alloc] init];
+    if (self != nil)
+    {
+        self.html = [coder decodeObjectForKey:@"html"];
+        self.data = [coder decodeObjectForKey:@"data"];
+        //self.userPreferences = [coder decodeObjectForKey:@"userPreferences"];
+        self.isFinished = @(YES);
+    }
+    return self;
+}
          
          
  - (NSArray *)listOfDataKeysThatMustBePresentToIndicateThatAllCallsToApiHaveBeenMade {

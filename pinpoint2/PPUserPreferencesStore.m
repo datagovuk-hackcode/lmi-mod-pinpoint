@@ -68,6 +68,32 @@
     [self incrementVersionOfUserPreferences];
 }
 
+- (void)saveCard:(NSObject *)card forSocCode:(NSString *)socCode {
+    NSMutableDictionary *savedCards = [defaults objectForKey:@"savedCards"];
+    if (!savedCards) {
+        savedCards = [[NSMutableDictionary alloc] init];
+    }
+    NSMutableArray *savedCardsForSocCode = [savedCards objectForKey:socCode];
+    if (!savedCardsForSocCode) {
+        savedCardsForSocCode = [[NSMutableArray alloc] init];
+        [savedCards setObject:savedCardsForSocCode forKey:socCode];
+    }
+    [savedCardsForSocCode addObject:[NSKeyedArchiver archivedDataWithRootObject:card]];
+    [savedCards setObject:savedCardsForSocCode forKey:socCode];
+    [defaults setObject:savedCards forKey:@"savedCards"];
+}
+
+- (NSArray *)getSavedCardsForSocCode:(NSString *)socCode {
+    NSDictionary *savedCards = [defaults objectForKey:@"savedCards"];
+    NSMutableArray *savedCardsForSocCode = [savedCards objectForKey:socCode];
+    NSMutableArray *unarchivedCards = [[NSMutableArray alloc] init];
+    for (NSData *data in savedCardsForSocCode) {
+        NSObject *card = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        [unarchivedCards addObject:card];
+    }
+    return unarchivedCards;
+}
+
 - (PPUserPreferences *)getCurrentUserPreferences {
     PPUserPreferences *userPrefs = [[PPUserPreferences alloc] init];
     [userPrefs setLikedJobs:[defaults objectForKey:@"likedJobs"]];

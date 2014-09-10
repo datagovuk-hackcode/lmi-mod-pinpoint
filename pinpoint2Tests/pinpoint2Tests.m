@@ -42,4 +42,11 @@
     XCTAssertTrue([card isFinished], @"shouldn't be true");
 }
 
+- (void)testSavingCards {
+    PPCard *card = [[PPCard alloc] init];
+    [[PPUserPreferencesStore sharedInstance] saveCard:card forSocCode:@"2316"];
+    NSArray *arraySavedCards = [[PPUserPreferencesStore sharedInstance] getSavedCardsForSocCode:@"2316"];
+    XCTAssertEqual(arraySavedCards[0], card, @"not equal");
+}
+
 @end

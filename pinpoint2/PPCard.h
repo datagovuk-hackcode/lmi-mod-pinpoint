@@ -18,7 +18,7 @@ typedef NS_ENUM(NSInteger, PPCardType) {
     PPCardTypeWorkingFutures
 };
 
-@interface PPCard : NSObject <PPDismissableCard, PPCardRelevancy, PPMultipleApiCallCard> {
+@interface PPCard : NSObject <PPDismissableCard, PPCardRelevancy, PPMultipleApiCallCard, NSCoding> {
     PPUserPreferencesStore *userPrefsStore;
 }
 

@@ -10,7 +10,9 @@
 #import "PPUserPreferencesStore.h"
 #import "PPUserPreferences.h"
 
-@interface PPUserPreferencesViewController ()
+@interface PPUserPreferencesViewController () {
+    PPUserPreferences *userPrefs;
+}
 
 @end
 
@@ -28,7 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    PPUserPreferences *userPrefs = [[PPUserPreferencesStore sharedInstance] getCurrentUserPreferences];
+    userPrefs = [[PPUserPreferencesStore sharedInstance] getCurrentUserPreferences];
     [self.keywordsTextView setText:[userPrefs.jobKeywords componentsJoinedByString:@"\n"]];
     [self.likedJobsTextView setText:[userPrefs.likedJobs componentsJoinedByString:@"\n"]];
 }
@@ -37,6 +39,23 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return userPrefs.likedJobs.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    cell.textLabel.text = userPrefs.likedJobs[indexPath.row][@"title"];
+    return cell;
 }
 
 /*

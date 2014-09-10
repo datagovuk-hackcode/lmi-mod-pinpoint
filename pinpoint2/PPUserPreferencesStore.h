@@ -18,6 +18,8 @@
 - (NSArray *)getArrayOfKeywordsAndPointsOrderedByPoints;
 - (void)addLikedJobData:(NSDictionary *)jobData;
 - (PPUserPreferences *)getCurrentUserPreferences;
+- (void)saveCard:(NSObject *)card forSocCode:(NSString *)socCode;
+- (NSArray *)getSavedCardsForSocCode:(NSString *)socCode;
 - (bool)userPreferencesAreOutOfDate:(PPUserPreferences *)userPreferences;
 + (instancetype)sharedInstance;
 
