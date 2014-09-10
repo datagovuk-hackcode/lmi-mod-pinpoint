@@ -366,9 +366,10 @@
 				ORGANIZATIONNAME = "Philip Hardwick";
 				TargetAttributes = {
 					4A207B8C195C212000ADBC76 = {
-						DevelopmentTeam = 4JJLC9B35H;
+						DevelopmentTeam = X9V6223Q5A;
 					};
 					4A207BAD195C212000ADBC76 = {
+						DevelopmentTeam = X9V6223Q5A;
 						TestTargetID = 4A207B8C195C212000ADBC76;
 					};
 				};
@@ -605,8 +606,8 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Harry Jones (7JZPUE2874)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Harry Jones (7JZPUE2874)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pinpoint2/pinpoint2-Prefix.pch";
 				INFOPLIST_FILE = "pinpoint2/pinpoint2-Info.plist";
@@ -623,8 +624,8 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Harry Jones (7JZPUE2874)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Harry Jones (7JZPUE2874)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pinpoint2/pinpoint2-Prefix.pch";
 				INFOPLIST_FILE = "pinpoint2/pinpoint2-Info.plist";
