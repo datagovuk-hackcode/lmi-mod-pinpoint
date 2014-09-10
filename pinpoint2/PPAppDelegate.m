@@ -25,7 +25,6 @@
     [[PPUnemploymentCardProvider alloc] initWithCardService:[PPCardService sharedInstance]];
     [[PPPayRegionCardProvider alloc] initWithCardService:[PPCardService sharedInstance]];
     #pragma clang diagnostic pop
-    [[UINavigationBar appearance] setBackgroundColor:[UIColor orangeColor]];
     
     [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:[NSBundle mainBundle].bundleIdentifier];
     return YES;
