@@ -29,23 +29,25 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    PPUserPreferencesStore *prefStore = [[PPUserPreferencesStore alloc] init];
-    NSArray *topKeywords = [prefStore getArrayOfTopFiveKeywordsOrderedByPoints];
-    if (topKeywords.count < 1){
-        NSLog(@"No keywords...");
-        return;
-    }
-    NSString *favouriteKeyword = topKeywords[0];
-    NSString *secondFavouriteKeyword = topKeywords.count >=1 ? topKeywords[1] : nil;
-    if (favouriteKeyword == nil) {
-
-    } else {
-        if (secondFavouriteKeyword == nil){
-            [self searchForString:favouriteKeyword];
-            NSLog(@"Finding jobs for keyword '%@'",favouriteKeyword);
-        }else{
-            [self searchForString:[NSString stringWithFormat:@"%@ OR %@",favouriteKeyword,secondFavouriteKeyword]];
-            NSLog(@"Finding jobs for keywords '%@' and '%@'", favouriteKeyword, secondFavouriteKeyword);
+    if (self.tableData.count == 0){
+        PPUserPreferencesStore *prefStore = [[PPUserPreferencesStore alloc] init];
+        NSArray *topKeywords = [prefStore getArrayOfTopFiveKeywordsOrderedByPoints];
+        if (topKeywords.count < 1){
+            NSLog(@"No keywords...");
+            return;
+        }
+        NSString *favouriteKeyword = topKeywords[0];
+        NSString *secondFavouriteKeyword = topKeywords.count >=1 ? topKeywords[1] : nil;
+        if (favouriteKeyword == nil) {
+            
+        } else {
+            if (secondFavouriteKeyword == nil){
+                [self searchForString:favouriteKeyword];
+                NSLog(@"Finding jobs for keyword '%@'",favouriteKeyword);
+            }else{
+                [self searchForString:[NSString stringWithFormat:@"%@ OR %@",favouriteKeyword,secondFavouriteKeyword]];
+                NSLog(@"Finding jobs for keywords '%@' and '%@'", favouriteKeyword, secondFavouriteKeyword);
+            }
         }
     }
 }
@@ -87,7 +89,7 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error){
         NSLog(@"getting job details failed: %@", error);
     }];
-
+    
 }
 #pragma mark - Table view data source
 
@@ -129,7 +131,9 @@
     return cell;
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 #pragma mark Storyboard
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell*)sender{

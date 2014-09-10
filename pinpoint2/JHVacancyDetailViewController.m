@@ -13,6 +13,12 @@
 #import <MapKit/MapKit.h>
 //#import "ProgressHUD.h"
 
+@interface JHVacancyDetailViewController()
+
+@property (nonatomic) MKMapView *mapView;
+
+@end
+
 @implementation JHVacancyDetailViewController
 @synthesize vacancyObject,modelLayout,cellTypes,cellActions;
 
@@ -112,6 +118,18 @@
     if (!vacancyObject){
         NSLog(@"No vacancy object passed...");
     }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appToBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appReturnsActive) name:UIApplicationDidBecomeActiveNotification object:nil];
+}
+
+
+- (void)appReturnsActive{
+    [self.mapView setShowsUserLocation:YES];
+}
+
+-(void)appToBackground{
+    [self.mapView setShowsUserLocation:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -177,6 +195,7 @@
             [map setShowsUserLocation:YES];
             [map setShowsBuildings:YES];
             [map setCenterCoordinate:coordinate zoomLevel:12 animated:NO];
+            self.mapView = map;
         });
         
     }else if ([model objectForKey:@"action"] && [[model objectForKey:@"type"] isEqualToString:@"link"]){
