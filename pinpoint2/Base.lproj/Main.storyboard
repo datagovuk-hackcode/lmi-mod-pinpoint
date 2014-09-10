@@ -267,7 +267,7 @@
             </objects>
             <point key="canvasLocation" x="630" y="715"/>
         </scene>
-        <!--User Card Collection View Controller-->
+        <!--Cards-->
         <scene sceneID="qXr-Ig-BDk">
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="rfT-u6-mnu" customClass="PPUserCardCollectionViewController" sceneMemberID="viewController">
@@ -310,7 +310,7 @@
                             <outlet property="delegate" destination="rfT-u6-mnu" id="b03-Yt-jHi"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="oYt-xY-nAX"/>
+                    <navigationItem key="navigationItem" title="Cards" prompt="Related cards you've seen" id="oYt-xY-nAX"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1bt-6i-vOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
