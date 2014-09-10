@@ -71,6 +71,11 @@
     return self;
 }
 
+- (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)panGestureRecognizer {
+    CGPoint velocity = [panGestureRecognizer velocityInView:self];
+    return fabs(velocity.x) > fabs(velocity.y);
+}
+
 - (void)panGestureRecognizerDidChange:(UIPanGestureRecognizer *)panGestureRecognizer {
     if ([self isDeleted]) {
         // The cell should be deleted, leave the state of the cell as it is
