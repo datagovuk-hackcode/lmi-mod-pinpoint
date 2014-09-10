@@ -9,6 +9,7 @@
 #import "PPAppDelegate.h"
 #import "PPJobCardProvider.h"
 #import "PPWorkingFuturesCardProvider.h"
+#import "PPUnemploymentCardProvider.h"
 #import "PPCardService.h"
 
 @implementation PPAppDelegate
@@ -17,6 +18,7 @@
 {
     [[PPJobCardProvider alloc] initWithCardService:[PPCardService sharedInstance]];
     [[PPWorkingFuturesCardProvider alloc] initWithCardService:[PPCardService sharedInstance]];
+    [[PPUnemploymentCardProvider alloc] initWithCardService:[PPCardService sharedInstance]];
     [[UINavigationBar appearance] setBackgroundColor:[UIColor orangeColor]];
     
     [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:[NSBundle mainBundle].bundleIdentifier];

@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		4A0E964C19B639300069A8C1 /* PPUserPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E964B19B639300069A8C1 /* PPUserPreferencesViewController.m */; };
 		4A0E964E19B7C8DC0069A8C1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4A0E964D19B7C8DC0069A8C1 /* .gitignore */; };
+		4A12161419BE44D80034ED6A /* unemployment-card.html in Resources */ = {isa = PBXBuildFile; fileRef = 4A12161319BE44D80034ED6A /* unemployment-card.html */; };
+		4A12161719BE46790034ED6A /* PPUnemploymentCardProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A12161619BE46790034ED6A /* PPUnemploymentCardProvider.m */; };
+		4A12161A19BE46930034ED6A /* PPUnemploymentCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A12161919BE46930034ED6A /* PPUnemploymentCard.m */; };
+		4A12161D19BF5F8D0034ED6A /* PPPayRegionCardProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A12161C19BF5F8D0034ED6A /* PPPayRegionCardProvider.m */; };
+		4A12162019BF606D0034ED6A /* PPPayRegionCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A12161F19BF606D0034ED6A /* PPPayRegionCard.m */; };
+		4A12162219BF60970034ED6A /* pay-region-card.html in Resources */ = {isa = PBXBuildFile; fileRef = 4A12162119BF60970034ED6A /* pay-region-card.html */; };
 		4A207B91195C212000ADBC76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A207B90195C212000ADBC76 /* Foundation.framework */; };
 		4A207B93195C212000ADBC76 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A207B92195C212000ADBC76 /* CoreGraphics.framework */; };
 		4A207B95195C212000ADBC76 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A207B94195C212000ADBC76 /* UIKit.framework */; };
@@ -60,6 +66,17 @@
 		4A0E964B19B639300069A8C1 /* PPUserPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPUserPreferencesViewController.m; sourceTree = "<group>"; };
 		4A0E964D19B7C8DC0069A8C1 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		4A12161219BD77390034ED6A /* PPCardRelevancy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPCardRelevancy.h; sourceTree = "<group>"; };
+		4A12161319BE44D80034ED6A /* unemployment-card.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "unemployment-card.html"; sourceTree = "<group>"; };
+		4A12161519BE46790034ED6A /* PPUnemploymentCardProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPUnemploymentCardProvider.h; sourceTree = "<group>"; };
+		4A12161619BE46790034ED6A /* PPUnemploymentCardProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPUnemploymentCardProvider.m; sourceTree = "<group>"; };
+		4A12161819BE46930034ED6A /* PPUnemploymentCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPUnemploymentCard.h; sourceTree = "<group>"; };
+		4A12161919BE46930034ED6A /* PPUnemploymentCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPUnemploymentCard.m; sourceTree = "<group>"; };
+		4A12161B19BF5F8D0034ED6A /* PPPayRegionCardProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPayRegionCardProvider.h; sourceTree = "<group>"; };
+		4A12161C19BF5F8D0034ED6A /* PPPayRegionCardProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPayRegionCardProvider.m; sourceTree = "<group>"; };
+		4A12161E19BF606D0034ED6A /* PPPayRegionCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPayRegionCard.h; sourceTree = "<group>"; };
+		4A12161F19BF606D0034ED6A /* PPPayRegionCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPayRegionCard.m; sourceTree = "<group>"; };
+		4A12162119BF60970034ED6A /* pay-region-card.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "pay-region-card.html"; sourceTree = "<group>"; };
+		4A12162319C01F830034ED6A /* PPMultipleApiCallCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPMultipleApiCallCard.h; sourceTree = "<group>"; };
 		4A207B8D195C212000ADBC76 /* pinpoint2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pinpoint2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A207B90195C212000ADBC76 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4A207B92195C212000ADBC76 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -205,6 +222,8 @@
 				4A207B99195C212000ADBC76 /* InfoPlist.strings */,
 				4A207B9C195C212000ADBC76 /* main.m */,
 				4A207B9E195C212000ADBC76 /* pinpoint2-Prefix.pch */,
+				4A12161319BE44D80034ED6A /* unemployment-card.html */,
+				4A12162119BF60970034ED6A /* pay-region-card.html */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -238,6 +257,11 @@
 				4A207BFB195D997000ADBC76 /* PPWorkingFuturesCard.h */,
 				4A207BFC195D997000ADBC76 /* PPWorkingFuturesCard.m */,
 				4A12161219BD77390034ED6A /* PPCardRelevancy.h */,
+				4A12161819BE46930034ED6A /* PPUnemploymentCard.h */,
+				4A12161919BE46930034ED6A /* PPUnemploymentCard.m */,
+				4A12161E19BF606D0034ED6A /* PPPayRegionCard.h */,
+				4A12161F19BF606D0034ED6A /* PPPayRegionCard.m */,
+				4A12162319C01F830034ED6A /* PPMultipleApiCallCard.h */,
 			);
 			name = Cards;
 			sourceTree = "<group>";
@@ -272,6 +296,10 @@
 				4A207BDB195C380000ADBC76 /* PPCardProviderInterface.h */,
 				4A207BDC195C39A300ADBC76 /* PPCardProvider.h */,
 				4A207BDD195C39A300ADBC76 /* PPCardProvider.m */,
+				4A12161519BE46790034ED6A /* PPUnemploymentCardProvider.h */,
+				4A12161619BE46790034ED6A /* PPUnemploymentCardProvider.m */,
+				4A12161B19BF5F8D0034ED6A /* PPPayRegionCardProvider.h */,
+				4A12161C19BF5F8D0034ED6A /* PPPayRegionCardProvider.m */,
 			);
 			name = "Card Data Providers";
 			sourceTree = "<group>";
@@ -369,11 +397,13 @@
 				4A0E964E19B7C8DC0069A8C1 /* .gitignore in Resources */,
 				4A207BF0195D400A00ADBC76 /* working-futures-card.html in Resources */,
 				4A207BA9195C212000ADBC76 /* Images.xcassets in Resources */,
+				4A12161419BE44D80034ED6A /* unemployment-card.html in Resources */,
 				4A207B9B195C212000ADBC76 /* InfoPlist.strings in Resources */,
 				4A207BF2195D400A00ADBC76 /* jquery-2.1.0.min.js in Resources */,
 				4A207BF1195D400A00ADBC76 /* Chart.js in Resources */,
 				4A207BE0195C3C7100ADBC76 /* job-card.html in Resources */,
 				4A207BA4195C212000ADBC76 /* Main.storyboard in Resources */,
+				4A12162219BF60970034ED6A /* pay-region-card.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,7 +471,11 @@
 				4A207B9D195C212000ADBC76 /* main.m in Sources */,
 				4A207BE9195C5C2D00ADBC76 /* PPCollectionViewFlowLayout.m in Sources */,
 				4A0E964C19B639300069A8C1 /* PPUserPreferencesViewController.m in Sources */,
+				4A12162019BF606D0034ED6A /* PPPayRegionCard.m in Sources */,
 				4A207BD4195C300800ADBC76 /* PPUserPreferences.m in Sources */,
+				4A12161719BE46790034ED6A /* PPUnemploymentCardProvider.m in Sources */,
+				4A12161A19BE46930034ED6A /* PPUnemploymentCard.m in Sources */,
+				4A12161D19BF5F8D0034ED6A /* PPPayRegionCardProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

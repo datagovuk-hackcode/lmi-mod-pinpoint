@@ -1,19 +1,19 @@
 //
-//  PPWorkingFuturesCard.m
+//  PPUnemploymentCard.m
 //  pinpoint2
 //
-//  Created by Philip Hardwick on 27/06/2014.
+//  Created by Philip Hardwick on 08/09/2014.
 //  Copyright (c) 2014 Philip Hardwick. All rights reserved.
 //
 
-#import "PPWorkingFuturesCard.h"
+#import "PPUnemploymentCard.h"
 
-@implementation PPWorkingFuturesCard
+@implementation PPUnemploymentCard
 
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.html = [self getHtmlTemplateStringFromName:@"working-futures-card"];
+        self.html = [self getHtmlTemplateStringFromName:@"unemployment-card"];
     }
     return self;
 }
@@ -27,7 +27,7 @@
 }
 
 - (NSArray *)listOfDataKeysThatMustBePresentToIndicateThatAllCallsToApiHaveBeenMade {
-    return @[@"title", @"workingFuturesCommaSeparatedList"];
+    return @[@"title", @"unemploymentCommaSeparatedList"];
 }
 
 @end

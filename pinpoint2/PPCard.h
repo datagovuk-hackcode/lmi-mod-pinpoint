@@ -11,13 +11,14 @@
 #import "PPUserPreferencesStore.h"
 #import "PPDismissableCard.h"
 #import "PPCardRelevancy.h"
+#import "PPMultipleApiCallCard.h"
 
 typedef NS_ENUM(NSInteger, PPCardType) {
     PPCardTypeJob,
     PPCardTypeWorkingFutures
 };
 
-@interface PPCard : NSObject <PPDismissableCard, PPCardRelevancy> {
+@interface PPCard : NSObject <PPDismissableCard, PPCardRelevancy, PPMultipleApiCallCard> {
     PPUserPreferencesStore *userPrefsStore;
 }
 
@@ -28,8 +29,8 @@ typedef NS_ENUM(NSInteger, PPCardType) {
 @property (nonatomic, strong) NSDictionary *data;
 
 - (instancetype)initWithUserPreferences:(PPUserPreferences *)userPrefs;
-- (void)setHtmlWithDictionary:(NSDictionary *)dataDictionary;
+- (void)addDataToCard:(NSDictionary *)dataDictionary;
+- (void)setCardAsFinishedIfDataIsAllPresentAndRenderTheHtml;
 - (NSString *)getHtmlTemplateStringFromName:(NSString *)name;
-- (void)setCardAsFinishedIfTheTemplateIsAllReplaced;
 
 @end

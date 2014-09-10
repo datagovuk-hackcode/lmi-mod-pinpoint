@@ -21,9 +21,9 @@ int socs[369]={1115,1116,1121,1122,1123,1131,1132,1133,1134,1135,1136,1139,1150,
     PPJobCard *card = [[PPJobCard alloc] initWithUserPreferences:userPreferences];
     [apiClient GET:@"soc/search" parameters:@{@"q":jobKeyword} success:^(AFHTTPRequestOperation *operation, id responseObject){
         NSDictionary *socDetails = (NSDictionary *)responseObject[arc4random_uniform(((NSArray *)responseObject).count)];
-        [card setHtmlWithDictionary:socDetails];
+        [card addDataToCard:socDetails];
+        [card setCardAsFinishedIfDataIsAllPresentAndRenderTheHtml];
         [card setCardType:PPCardTypeJob];
-        [card setValue:@(YES) forKey:@"isFinished"];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error){
         NSLog(@"getting job details failed: %@", error);
     }];
@@ -34,9 +34,9 @@ int socs[369]={1115,1116,1121,1122,1123,1131,1132,1133,1134,1135,1136,1139,1150,
     PPJobCard *card = [[PPJobCard alloc] initWithUserPreferences:userPreferences];
     [apiClient GET:[NSString stringWithFormat:@"soc/code/%d", socs[arc4random_uniform(369)]] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject){
         NSDictionary *socDetails = (NSDictionary *)responseObject;
-        [card setHtmlWithDictionary:socDetails];
+        [card addDataToCard:socDetails];
+        [card setCardAsFinishedIfDataIsAllPresentAndRenderTheHtml];
         [card setCardType:PPCardTypeJob];
-        [card setValue:@(YES) forKey:@"isFinished"];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error){
         NSLog(@"getting job details failed: %@", error);
     }];

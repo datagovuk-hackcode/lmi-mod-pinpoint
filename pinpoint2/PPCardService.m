@@ -45,12 +45,11 @@
     for (id<PPCardProviderInterface> cardProvider in cardProviders) {
         PPCard *card = [cardProvider provideCardFromUserPreferences:[[PPUserPreferencesStore sharedInstance] getCurrentUserPreferences]];
         if ([[card isFinished] boolValue] && ![cardsFinished containsObject:card]) {
-            //[cardsFinished addObject:card];
             [cardsFinished insertObject:card atIndex:arc4random_uniform(cardsFinished.count)];
         } else if (card) {
             [cardsUnfinished addObject:card];
+            [card addObserver:self forKeyPath:NSStringFromSelector(@selector(isFinished)) options:0 context:NULL];
         }
-        [card addObserver:self forKeyPath:NSStringFromSelector(@selector(isFinished)) options:0 context:NULL];
     }
 }
 

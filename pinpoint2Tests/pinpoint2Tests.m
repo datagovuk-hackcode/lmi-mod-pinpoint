@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "PPWorkingFuturesCard.h"
 
 @interface pinpoint2Tests : XCTestCase
 
@@ -28,7 +29,17 @@
 
 - (void)testExample
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    PPWorkingFuturesCard *card = [[PPWorkingFuturesCard alloc] init];
+    [card setHtml:[card getHtmlTemplateStringFromName:@"working-futures-card"]];
+    NSDictionary *data = @{@"title":@"job title"};
+    [card addDataToCard:data];
+    [card setCardAsFinishedIfDataIsAllPresentAndRenderTheHtml];
+    XCTAssert([[card isFinished] boolValue] == NO, @"Card is finished: %@", [card isFinished]);
+    
+    data = @{@"workingFuturesCommaSeparatedList":@"job,title"};
+    [card addDataToCard:data];
+    [card setCardAsFinishedIfDataIsAllPresentAndRenderTheHtml];
+    XCTAssertTrue([card isFinished], @"shouldn't be true");
 }
 
 @end

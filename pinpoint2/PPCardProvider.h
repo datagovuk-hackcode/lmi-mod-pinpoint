@@ -16,5 +16,6 @@
 }
 
 - (instancetype)initWithCardService:(PPCardService *)cardService;
+- (NSString *)getUnusedSocCodeFromArrayOfPossibles:(NSArray *)socCodes usingNSDefaultsKeyForUsedCodes:(NSString *) keyForUsedCodes;
 
 @end

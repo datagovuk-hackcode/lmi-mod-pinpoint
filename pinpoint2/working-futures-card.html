@@ -48,7 +48,7 @@
 //                              }
         </script>
         <script>
-            var data = { labels :['{{yearsCommaSeparatedList}}'], datasets : [ { id : 'all', fillColor : 'rgba(240,240,240,0.5)', strokeColor : 'rgba(220,220,220,1)', pointColor : 'rgba(220,220,220,1)', pointStrokeColor : '#fff', data : [{{workingFuturesCommaSeparatedLIst}}] } ] };
+            var data = { labels :['{{{yearsCommaSeparatedList}}}'], datasets : [ { id : 'all', fillColor : 'rgba(240,240,240,0.5)', strokeColor : 'rgba(220,220,220,1)', pointColor : 'rgba(220,220,220,1)', pointStrokeColor : '#fff', data : [{{{workingFuturesCommaSeparatedList}}}] } ] };
             
             var ctx = document.getElementById('myChart').getContext('2d');var myNewChart = new Chart(ctx);myNewChart.Line(data);
             
