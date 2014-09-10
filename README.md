@@ -1,13 +1,49 @@
-##pinpoint2
-=========
+## LMI for All Mod
+# Pinpoint v2
 
-pintpoint v2
+---
 
-###TODO:
-* Add in cards to ask for more preferences like moving locations and qualifications
-* Show cards with information about getting the next level of qualification or moving to a differnt area and how that affects jobs
-..* Needs html templates to be created
-* Styling - make it look better
-* Get a page of feedback in the app about what keywords it's identified
-* Get a list of vacancies based on favourite keyword
-* Have a place to view saved cards
+### Contributors
+
+* [Phil Hardwick]
+* [Harry Jones]
+
+---
+
+Pinpoint is Tinder for jobs.
+
+---
+
+### Data used
+
+
+* LMI for All API
+
+---
+
+ 
+### How to run
+ 
+Make sure you have [Xcode], [git], and [CocoaPods] installed
+ 
+```sh
+git clone git@github.com:rewiredstatedevs/LMI-for-all-mod-pinpoint2.git
+cd lmi-for-all-mod-Pinpoint
+pod install
+```
+ 
+and then run Pinpoint.xcworkspace in Xcode.
+
+---
+
+### Improvements
+
+* The first way I'd improve this project if I had more time is that I'd add more lens flare
+* Then, I'd add some 360 noscoping.
+
+
+[Harry Jones]:https://harryj.uk
+[Phil Hardwick]:https://github.com/PhilHardwick
+[Xcode]:https://developer.apple.com/xcode/
+[git]:http://git-scm.com/
+[CocoaPods]:http://cocoapods.org/
