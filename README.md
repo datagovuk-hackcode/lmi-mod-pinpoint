@@ -28,7 +28,7 @@ Make sure you have [Xcode], [git], and [CocoaPods] installed
  
 ```sh
 git clone git@github.com:rewiredstatedevs/LMI-for-all-mod-pinpoint2.git
-cd lmi-for-all-mod-Pinpoint
+cd LMI-for-all-mod-pinpoint2
 pod install
 ```
  
