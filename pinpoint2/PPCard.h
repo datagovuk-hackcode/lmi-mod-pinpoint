@@ -14,8 +14,8 @@
 #import "PPMultipleApiCallCard.h"
 
 typedef NS_ENUM(NSInteger, PPCardType) {
-    PPCardTypeJob,
-    PPCardTypeWorkingFutures
+    PPCardTypeHtml,
+    PPcardTypeNonHtml
 };
 
 @interface PPCard : NSObject <PPDismissableCard, PPCardRelevancy, PPMultipleApiCallCard, NSCoding> {

@@ -18,8 +18,9 @@
 - (void)addPoints:(NSInteger)points forKeyword:(NSString *)keyword;
 - (void)addLikedJobData:(NSDictionary *)jobData;
 - (PPUserPreferences *)getCurrentUserPreferences;
-- (void)saveCard:(NSObject *)card forSocCode:(NSString *)socCode;
-- (NSArray *)getSavedCardsForSocCode:(NSString *)socCode;
+- (void)setCurrentQualificationCodeNumber:(NSString *)code;
+//- (void)saveCard:(NSObject *)card forSocCode:(NSString *)socCode;
+//- (NSArray *)getSavedCardsForSocCode:(NSString *)socCode;
 - (bool)userPreferencesAreOutOfDate:(PPUserPreferences *)userPreferences;
 + (instancetype)sharedInstance;
 

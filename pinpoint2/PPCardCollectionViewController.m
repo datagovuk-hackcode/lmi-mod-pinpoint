@@ -10,6 +10,8 @@
 #import "PPCardCollectionViewCell.h"
 #import "PPCollectionViewFlowLayout.h"
 #import "PPLoadingCollectionViewCell.h"
+#import "PPNonHtmlCard.h"
+#import "PPQualificationQuestionCell.h"
 
 #define MIN_NUM_CARDS 5
 
@@ -53,11 +55,20 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    PPCardCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cardCell" forIndexPath:indexPath];
-    cell.card = [self.cards objectAtIndex:indexPath.row];
-    [cell configureCard];
-    cell.cardActionDelegate = self;
-    return cell;
+    PPCard *card = ((PPCard *)[self.cards objectAtIndex:indexPath.row]);
+    if (card.cardType == PPcardTypeNonHtml) {
+        PPNonHtmlCard *nonHtmlCard = (PPNonHtmlCard *)card;
+        PPQualificationQuestionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:nonHtmlCard.nameOfCell forIndexPath:indexPath];
+        [cell setCellDismisserDelegate:self];
+        [cell configureCard];
+        return cell;
+    } else {
+        PPCardCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cardCell" forIndexPath:indexPath];
+        cell.card = [self.cards objectAtIndex:indexPath.row];
+        [cell configureCard];
+        cell.cardActionDelegate = self;
+        return cell;
+    }
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
@@ -128,11 +139,18 @@
     [self getCardsFromCardService:3];
 }
 
-- (void)cardDidBeginPanning:(PPCardCollectionViewCell *)cardCell{
+
+- (void)dismissCell:(UICollectionViewCell *)cell {
+    NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
+    [self.cards removeObjectAtIndex:indexPath.item];
+    [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
+}
+    
+- (void)cardDidBeginPanning:(PPCardCollectionViewCell *)cardCell {
     self.collectionView.scrollEnabled = NO;
 }
 
-- (void)cardDidEndPanning:(PPCardCollectionViewCell *)cardCell{
+- (void)cardDidEndPanning:(PPCardCollectionViewCell *)cardCell {
     self.collectionView.scrollEnabled = YES;
 }
 

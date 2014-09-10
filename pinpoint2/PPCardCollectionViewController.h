@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "PPCardActionDelegate.h"
 #import "PPCardService.h"
+#import "PPCellDismisser.h"
 
-@interface PPCardCollectionViewController : UICollectionViewController <PPCardActionDelegate>
+@interface PPCardCollectionViewController : UICollectionViewController <PPCardActionDelegate, PPCellDismisser>
 
 @property (strong, nonatomic) PPCardService *cardService;
 @property (strong, nonatomic) NSMutableArray *cards;

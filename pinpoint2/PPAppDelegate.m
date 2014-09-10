@@ -11,6 +11,8 @@
 #import "PPWorkingFuturesCardProvider.h"
 #import "PPUnemploymentCardProvider.h"
 #import "PPPayRegionCardProvider.h"
+#import "PPNonHtmlCardProvider.h"
+#import "PPNextQualificationCardProvider.h"
 #import "PPCardService.h"
 
 @implementation PPAppDelegate
@@ -24,6 +26,8 @@
     [[PPWorkingFuturesCardProvider alloc] initWithCardService:[PPCardService sharedInstance]];
     [[PPUnemploymentCardProvider alloc] initWithCardService:[PPCardService sharedInstance]];
     [[PPPayRegionCardProvider alloc] initWithCardService:[PPCardService sharedInstance]];
+    [[PPNonHtmlCardProvider alloc] initWithCardService:[PPCardService sharedInstance]];
+    [[PPNextQualificationCardProvider alloc] initWithCardService:[PPCardService sharedInstance]];
     #pragma clang diagnostic pop
     
     [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:[NSBundle mainBundle].bundleIdentifier];

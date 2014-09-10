@@ -101,14 +101,6 @@
     return true;
 }
 
-- (void)handleLike {
-    
-}
-
-- (void)handleDislike {
-    
-}
-
 - (void)encodeWithCoder:(NSCoder *)coder;
 {
     [coder encodeObject:self.html forKey:@"html"];
@@ -128,14 +120,21 @@
     }
     return self;
 }
-         
-         
+
  - (NSArray *)listOfDataKeysThatMustBePresentToIndicateThatAllCallsToApiHaveBeenMade {
      return @[];
  }
 
 - (bool)cardCanBeOutOfDate {
     return NO;
+}
+
+- (void)handleLike {
+    
+}
+
+- (void)handleDislike {
+    
 }
 
 @end

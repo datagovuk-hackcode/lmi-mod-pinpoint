@@ -23,7 +23,7 @@ int validSOCs[]={1115,1116,1121,1122,1123,1131,1132,1133,1134,1135,1136,1139,115
         NSDictionary *socDetails = (NSDictionary *)responseObject[arc4random_uniform((uint)((NSArray *)responseObject).count)];
         [card addDataToCard:socDetails];
         [card setCardAsFinishedIfDataIsAllPresentAndRenderTheHtml];
-        [card setCardType:PPCardTypeJob];
+        [card setCardType:PPCardTypeHtml];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error){
         NSLog(@"getting job details failed: %@", error);
     }];
@@ -36,7 +36,7 @@ int validSOCs[]={1115,1116,1121,1122,1123,1131,1132,1133,1134,1135,1136,1139,115
         NSDictionary *socDetails = (NSDictionary *)responseObject;
         [card addDataToCard:socDetails];
         [card setCardAsFinishedIfDataIsAllPresentAndRenderTheHtml];
-        [card setCardType:PPCardTypeJob];
+        [card setCardType:PPCardTypeHtml];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error){
         NSLog(@"getting job details failed: %@", error);
     }];
