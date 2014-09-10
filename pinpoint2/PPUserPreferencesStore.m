@@ -48,7 +48,6 @@
     [arrayOfKeywordsAndPoints sortUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"points" ascending:NO]]];
     NSMutableArray *keywords = [[NSMutableArray alloc] initWithCapacity:5];
     for (NSDictionary *keywordAndPoints in arrayOfKeywordsAndPoints) {
-        NSLog(@"%@", keywordAndPoints);
         [keywords addObject:keywordAndPoints[@"keyword"]];
         if (keywords.count == 5) {
             return keywords;

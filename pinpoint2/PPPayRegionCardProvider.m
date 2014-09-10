@@ -65,6 +65,9 @@
 }
 
 - (NSString *)getRegionNameFromCode:(int)code {
+    if (!regionCodes) {
+        [self getRegionCodesFromAPI];
+    }
     for (NSDictionary *regionCode in regionCodes) {
         if ((int)regionCode[@"value"] == code) {
             return regionCode[@"name"];
