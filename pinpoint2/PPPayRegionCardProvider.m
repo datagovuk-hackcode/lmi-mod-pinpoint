@@ -31,16 +31,18 @@
     }
     [apiClient GET:@"ashe/estimatePay" parameters:@{@"soc":socCode, @"breakdown":@"region"} success:^(AFHTTPRequestOperation *operation, id response){
         NSDictionary *responseDict = (NSDictionary *)response;
-        NSArray *breakdown = responseDict[@"series"][0][@"breakdown"];
-        NSMutableArray *arrayOfReadableData = [[NSMutableArray alloc] init];
-        for (NSDictionary *regionAndPay in breakdown) {
-            NSMutableDictionary *mutableRegionAndPay = [regionAndPay mutableCopy];
-            [mutableRegionAndPay setObject:[self getRegionNameFromCode:(int)regionAndPay[@"region"]] forKey:@"regionName"];
-            [mutableRegionAndPay setObject:[self getAnnualPayFromWeeklyPay:regionAndPay[@"estpay"]] forKey:@"yearlyPay"];
-            [arrayOfReadableData addObject:mutableRegionAndPay];
+        if ([responseDict[@"series"] count] > 0){
+            NSArray *breakdown = responseDict[@"series"][0][@"breakdown"];
+            NSMutableArray *arrayOfReadableData = [[NSMutableArray alloc] init];
+            for (NSDictionary *regionAndPay in breakdown) {
+                NSMutableDictionary *mutableRegionAndPay = [regionAndPay mutableCopy];
+                [mutableRegionAndPay setObject:[self getRegionNameFromCode:(int)regionAndPay[@"region"]] forKey:@"regionName"];
+                [mutableRegionAndPay setObject:[self getAnnualPayFromWeeklyPay:regionAndPay[@"estpay"]] forKey:@"yearlyPay"];
+                [arrayOfReadableData addObject:mutableRegionAndPay];
+            }
+            [card addDataToCard:@{@"breakdown":arrayOfReadableData}];
+            [card setCardAsFinishedIfDataIsAllPresentAndRenderTheHtml];
         }
-        [card addDataToCard:@{@"breakdown":arrayOfReadableData}];
-        [card setCardAsFinishedIfDataIsAllPresentAndRenderTheHtml];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error){
         NSLog(@"error: %@", error);
     }];
@@ -61,7 +63,7 @@
         NSLog(@"getting job details failed: %@", error);
     }];
 }
-        
+
 - (NSString *)getRegionNameFromCode:(int)code {
     for (NSDictionary *regionCode in regionCodes) {
         if ((int)regionCode[@"value"] == code) {
