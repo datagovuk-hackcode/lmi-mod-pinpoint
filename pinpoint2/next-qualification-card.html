@@ -1,18 +1,18 @@
 <div style="background:#fff; font-family:'helvetica neue', sans-serif;">
-    <h1>{{title}}</h1>
-    <h3>Annual pay</h3>
+    <h3>{{title}}</h3>
+    <h4>Annual pay</h4>
     <ul>
         {{#payBreakdown}}
         <li>{{qualificationName}}: {{yearlyPay}}</li>
         {{/payBreakdown}}
     </ul>
-    <h3>Number of jobs this year</h3>
+    <h4>Number of jobs this year</h4>
     <ul>
         {{#workingFuturesBreakdown}}
         <li>{{qualificationName}}: {{numberOfJobsAvailable}}</li>
         {{/workingFuturesBreakdown}}
     </ul>
-    <h3>Percentage unemployment</h3>
+    <h4>Percentage unemployment</h4>
     <ul>
         {{#unemploymentBreakdown}}
         <li>{{qualificationName}}: {{unemploymentRate}}</li>

@@ -120,14 +120,21 @@
     }
     return self;
 }
-         
-         
+
  - (NSArray *)listOfDataKeysThatMustBePresentToIndicateThatAllCallsToApiHaveBeenMade {
      return @[];
  }
 
 - (bool)cardCanBeOutOfDate {
     return NO;
+}
+
+- (void)handleLike {
+    
+}
+
+- (void)handleDislike {
+    
 }
 
 @end
