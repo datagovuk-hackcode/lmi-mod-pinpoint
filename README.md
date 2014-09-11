@@ -27,8 +27,8 @@ Pinpoint is Tinder for jobs. Version 1 was developed for the June 2014 LMI for A
 Make sure you have [Xcode], [git], and [CocoaPods] installed
  
 ```sh
-git clone git@github.com:rewiredstatedevs/LMI-for-all-mod-pinpoint2.git
-cd LMI-for-all-mod-pinpoint2
+git clone git@github.com:rewiredstatedevs/lmi-mod-pinpoint.git
+cd lmi-mod-pinpoint
 pod install
 ```
  
