@@ -38,12 +38,11 @@ and then run Pinpoint.xcworkspace in Xcode.
 
 ### Improvements
 
-* The first way I'd improve this project if I had more time is that I'd add more lens flare
-* Then, I'd add some 360 noscoping.
+* Improve look and feel of user interface e.g. add some icons for other pages and html in cards
 
 
 [Harry Jones]:https://harryj.uk
-[Phil Hardwick]:https://github.com/PhilHardwick
+[Phil Hardwick]:mailto:philipchardwick@gmail.com
 [Xcode]:https://developer.apple.com/xcode/
 [git]:http://git-scm.com/
 [CocoaPods]:http://cocoapods.org/
