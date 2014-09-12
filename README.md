@@ -42,7 +42,7 @@ and then run Pinpoint.xcworkspace in Xcode.
 
 
 [Harry Jones]:https://harryj.uk
-[Phil Hardwick]:mailto:philipchardwick@gmail.com
+[Phil Hardwick]:https://github.com/philhardwick
 [Xcode]:https://developer.apple.com/xcode/
 [git]:http://git-scm.com/
 [CocoaPods]:http://cocoapods.org/
